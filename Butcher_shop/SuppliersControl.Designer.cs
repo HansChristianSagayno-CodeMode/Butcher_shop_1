@@ -98,17 +98,73 @@
             lblSection.AutoSize = true;
 
             // DataGridView
+            // DataGridView
             dgvSuppliers.Location = new Point(10, 40);
             dgvSuppliers.Size = new Size(1120, 540);
+
             dgvSuppliers.BackgroundColor = Color.White;
+            dgvSuppliers.BorderStyle = BorderStyle.None;
+
             dgvSuppliers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvSuppliers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvSuppliers.MultiSelect = false;
+            dgvSuppliers.ReadOnly = true;
 
-            dgvSuppliers.Columns.Add("supplier_id", "supplier_id");
-            dgvSuppliers.Columns.Add("supplier_name", "supplier_name");
-            dgvSuppliers.Columns.Add("supplier_address", "supplier_address");
-            dgvSuppliers.Columns.Add("supplier_contact", "supplier_contact");
+            // Remove left selector column
+            dgvSuppliers.RowHeadersVisible = false;
+
+            // Prevent duplicate columns
+            dgvSuppliers.AutoGenerateColumns = false;
+
+            // Styling for readability
+            dgvSuppliers.EnableHeadersVisualStyles = false;
+
+            dgvSuppliers.ColumnHeadersDefaultCellStyle.BackColor = Color.LightGray;
+            dgvSuppliers.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
+            dgvSuppliers.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            dgvSuppliers.ColumnHeadersHeight = 35;
+
+            dgvSuppliers.DefaultCellStyle.BackColor = Color.White;
+            dgvSuppliers.DefaultCellStyle.ForeColor = Color.Black;
+            dgvSuppliers.DefaultCellStyle.Font = new Font("Segoe UI", 10F);
+
+            dgvSuppliers.DefaultCellStyle.SelectionBackColor = Color.SteelBlue;
+            dgvSuppliers.DefaultCellStyle.SelectionForeColor = Color.White;
+
+            dgvSuppliers.AlternatingRowsDefaultCellStyle.BackColor = Color.Gainsboro;
+
+            dgvSuppliers.RowTemplate.Height = 40;
+
+            // Clear columns before adding
+            dgvSuppliers.Columns.Clear();
+
+            // Supplier ID
+            DataGridViewTextBoxColumn colID = new DataGridViewTextBoxColumn();
+            colID.Name = "supplier_id";
+            colID.HeaderText = "Supplier ID";
+            colID.DataPropertyName = "supplier_id";
+            dgvSuppliers.Columns.Add(colID);
+
+            // Supplier Name
+            DataGridViewTextBoxColumn colName = new DataGridViewTextBoxColumn();
+            colName.Name = "supplier_name";
+            colName.HeaderText = "Supplier Name";
+            colName.DataPropertyName = "supplier_name";
+            dgvSuppliers.Columns.Add(colName);
+
+            // Supplier Address
+            DataGridViewTextBoxColumn colAddress = new DataGridViewTextBoxColumn();
+            colAddress.Name = "supplier_address";
+            colAddress.HeaderText = "Supplier Address";
+            colAddress.DataPropertyName = "supplier_address";
+            dgvSuppliers.Columns.Add(colAddress);
+
+            // Contact
+            DataGridViewTextBoxColumn colContact = new DataGridViewTextBoxColumn();
+            colContact.Name = "supplier_contact";
+            colContact.HeaderText = "Contact";
+            colContact.DataPropertyName = "supplier_contact";
+            dgvSuppliers.Columns.Add(colContact);
 
             // Control
             Controls.Add(pnlContent);

@@ -105,25 +105,93 @@ namespace Butcher_shop
             pnlInventoryList.TabIndex = 1;
             // 
             // dgvInventory
-            // 
+            // =============================
+            // DataGridView Styling
+            // =============================
+
+            dgvInventory.Dock = DockStyle.Fill;
+
+            dgvInventory.BackgroundColor = Color.White;
+            dgvInventory.BorderStyle = BorderStyle.None;
+
+            dgvInventory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            dgvInventory.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvInventory.MultiSelect = false;
+            dgvInventory.ReadOnly = true;
+
             dgvInventory.AllowUserToAddRows = false;
             dgvInventory.AllowUserToDeleteRows = false;
-            dgvInventory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvInventory.BackgroundColor = Color.White;
-            dgvInventory.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvInventory.Columns.AddRange(new DataGridViewColumn[] { invColProductID, invColProductName, invColQuantity, invColUnit, invColStatus });
-            dgvInventory.Dock = DockStyle.Fill;
-            dgvInventory.Location = new Point(20, 20);
-            dgvInventory.MultiSelect = false;
-            dgvInventory.Name = "dgvInventory";
-            dgvInventory.ReadOnly = true;
+            dgvInventory.AllowUserToResizeRows = false;
+
+            // Remove left selector column
             dgvInventory.RowHeadersVisible = false;
-            dgvInventory.RowHeadersWidth = 51;
-            dgvInventory.RowTemplate.Height = 30;
-            dgvInventory.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvInventory.Size = new Size(1160, 590);
-            dgvInventory.TabIndex = 0;
-            dgvInventory.CellContentClick += dgvInventory_CellContentClick;
+
+            // Prevent duplicate columns
+            dgvInventory.AutoGenerateColumns = false;
+
+            // Header style
+            dgvInventory.EnableHeadersVisualStyles = false;
+            dgvInventory.ColumnHeadersDefaultCellStyle.BackColor = Color.LightGray;
+            dgvInventory.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
+            dgvInventory.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            dgvInventory.ColumnHeadersHeight = 35;
+
+            // Row style
+            dgvInventory.DefaultCellStyle.BackColor = Color.White;
+            dgvInventory.DefaultCellStyle.ForeColor = Color.Black;
+            dgvInventory.DefaultCellStyle.Font = new Font("Segoe UI", 11F);
+
+            dgvInventory.DefaultCellStyle.SelectionBackColor = Color.SteelBlue;
+            dgvInventory.DefaultCellStyle.SelectionForeColor = Color.White;
+
+            // Alternating rows
+            dgvInventory.AlternatingRowsDefaultCellStyle.BackColor = Color.Gainsboro;
+
+            // Larger rows for readability
+            dgvInventory.RowTemplate.Height = 40;
+
+            // Clear columns first (prevents duplication)
+            dgvInventory.Columns.Clear();
+
+            // =============================
+            // Columns
+            // =============================
+
+            // Stock Out ID
+            DataGridViewTextBoxColumn colStockID = new DataGridViewTextBoxColumn();
+            colStockID.Name = "stock_out_id";
+            colStockID.HeaderText = "Stock Out ID";
+            colStockID.DataPropertyName = "stock_out_id";
+            dgvInventory.Columns.Add(colStockID);
+
+            // Product ID
+            DataGridViewTextBoxColumn colProductID = new DataGridViewTextBoxColumn();
+            colProductID.Name = "product_id";
+            colProductID.HeaderText = "Product ID";
+            colProductID.DataPropertyName = "product_id";
+            dgvInventory.Columns.Add(colProductID);
+
+            // Quantity Out
+            DataGridViewTextBoxColumn colQty = new DataGridViewTextBoxColumn();
+            colQty.Name = "quantity_out";
+            colQty.HeaderText = "Quantity Out";
+            colQty.DataPropertyName = "quantity_out";
+            dgvInventory.Columns.Add(colQty);
+
+            // Date
+            DataGridViewTextBoxColumn colDate = new DataGridViewTextBoxColumn();
+            colDate.Name = "stock_out_date";
+            colDate.HeaderText = "Date";
+            colDate.DataPropertyName = "stock_out_date";
+            dgvInventory.Columns.Add(colDate);
+
+            // Reason
+            DataGridViewTextBoxColumn colReason = new DataGridViewTextBoxColumn();
+            colReason.Name = "reason";
+            colReason.HeaderText = "Reason";
+            colReason.DataPropertyName = "reason";
+            dgvInventory.Columns.Add(colReason);
             // 
             // invColProductID
             // 

@@ -138,29 +138,18 @@ namespace Butcher_shop
             // 
             // dgvCustomers
             // 
-            dgvCustomers.AllowUserToAddRows = false;
-            dgvCustomers.AllowUserToDeleteRows = false;
-            dgvCustomers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvCustomers.BackgroundColor = Color.White;
-            dgvCustomers.ColumnHeadersHeight = 29;
-            dgvCustomers.Columns.AddRange(new DataGridViewColumn[] { custColID, custColName, custColAddress, custColContact, custColCreated });
+            // =============================
+            // DataGridView Styling
+            // =============================
+
+            // dgvCustomers
             dgvCustomers.Dock = DockStyle.Fill;
-            dgvCustomers.Location = new Point(20, 20);
-            dgvCustomers.Name = "dgvCustomers";
-            dgvCustomers.ReadOnly = true;
-            dgvCustomers.RowHeadersWidth = 51;
-            dgvCustomers.RowTemplate.Height = 40;
+            dgvCustomers.BackgroundColor = Color.White;
+            dgvCustomers.BorderStyle = BorderStyle.None;
+
+            dgvCustomers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvCustomers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvCustomers.Size = new Size(1160, 590);
-            dgvCustomers.TabIndex = 0;
-            dgvCustomers.CellContentClick += dgvCustomers_CellContentClick_1;
-
-
-            dgvCustomers.DefaultCellStyle.Font = new Font("Segoe UI", 11);
-            dgvCustomers.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 11, FontStyle.Bold);
-
             dgvCustomers.MultiSelect = false;
-            dgvCustomers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvCustomers.ReadOnly = true;
 
             dgvCustomers.AllowUserToAddRows = false;
@@ -168,15 +157,40 @@ namespace Butcher_shop
             dgvCustomers.AllowUserToResizeRows = false;
 
             dgvCustomers.RowHeadersVisible = false;
+            dgvCustomers.AutoGenerateColumns = false;
 
-            dgvCustomers.DefaultCellStyle.SelectionBackColor = Color.FromArgb(0, 120, 215);
+            // Header style
+            dgvCustomers.EnableHeadersVisualStyles = false;
+            dgvCustomers.ColumnHeadersDefaultCellStyle.BackColor = Color.LightGray;
+            dgvCustomers.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
+            dgvCustomers.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            dgvCustomers.ColumnHeadersHeight = 35;
+
+            // Row style
+            dgvCustomers.DefaultCellStyle.BackColor = Color.White;
+            dgvCustomers.DefaultCellStyle.ForeColor = Color.Black;
+            dgvCustomers.DefaultCellStyle.Font = new Font("Segoe UI", 11F);
+
+            dgvCustomers.DefaultCellStyle.SelectionBackColor = Color.SteelBlue;
             dgvCustomers.DefaultCellStyle.SelectionForeColor = Color.White;
 
+            dgvCustomers.AlternatingRowsDefaultCellStyle.BackColor = Color.Gainsboro;
+
+            dgvCustomers.RowTemplate.Height = 40;
+
+            // IMPORTANT: add the columns
+            dgvCustomers.Columns.AddRange(new DataGridViewColumn[]
+            {
+    custColID,
+    custColName,
+    custColAddress,
+    custColContact,
+    custColCreated
+            });
+
+            // Center important columns
             custColID.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             custColName.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-
-            dgvCustomers.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(245, 245, 245);
-            // 
             // custColID
             // 
             custColID.DataPropertyName = "employee_id";
