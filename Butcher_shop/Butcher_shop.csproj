@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MySql.Data" Version="9.6.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="EmployeesControl..cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="DashboardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="StockOutControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="ProductsControl..cs" />
+    <Compile Update="InventoryControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="CustomersControl.cs" />
+    <Compile Update="SupplyControl..cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+
+</Project>
