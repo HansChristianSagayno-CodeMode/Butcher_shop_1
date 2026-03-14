@@ -50,6 +50,7 @@
             btnRefreshReports.TabIndex = 4;
             btnRefreshReports.Text = "Refresh Reports";
             btnRefreshReports.UseVisualStyleBackColor = false;
+            btnRefreshReports.Click += btnRefreshReports_Click;
             // 
             // dgvSummary
             // 
@@ -65,24 +66,26 @@
             dgvSummary.RowHeadersWidth = 51;
             dgvSummary.Size = new Size(1100, 565);
             dgvSummary.TabIndex = 0;
+            dgvSummary.CellContentClick += dgvSummary_CellContentClick;
             // 
             // dataGridViewTextBoxColumn1
             // 
-            // Date
-            dataGridViewTextBoxColumn1.HeaderText = "Date";
             dataGridViewTextBoxColumn1.DataPropertyName = "Date";
+            dataGridViewTextBoxColumn1.HeaderText = "Date";
             dataGridViewTextBoxColumn1.MinimumWidth = 6;
             dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-
-            // Total Transactions
-            dataGridViewTextBoxColumn2.HeaderText = "Total Transactions";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
             dataGridViewTextBoxColumn2.DataPropertyName = "TotalTransactions";
+            dataGridViewTextBoxColumn2.HeaderText = "Total Transactions";
             dataGridViewTextBoxColumn2.MinimumWidth = 6;
             dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-
-            // Total Sales
-            dataGridViewTextBoxColumn3.HeaderText = "Total Sales";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
             dataGridViewTextBoxColumn3.DataPropertyName = "TotalSales";
+            dataGridViewTextBoxColumn3.HeaderText = "Total Sales";
             dataGridViewTextBoxColumn3.MinimumWidth = 6;
             dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 

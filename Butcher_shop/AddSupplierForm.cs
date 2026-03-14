@@ -27,7 +27,7 @@ namespace Butcher_shop
 
             CreateHeader();
             ApplyModernStyle();
-            this.Height = 420;
+            this.Height = 460;
         }
 
         // Rounded corners
@@ -98,6 +98,13 @@ namespace Butcher_shop
         // Modern UI
         private void ApplyModernStyle()
         {
+            int labelLeft = 40;
+            int textboxLeft = 40;
+            int textboxWidth = 300;
+
+            int currentTop = 70; // start below header
+
+            // TEXTBOX STYLE
             txtName.BorderStyle = BorderStyle.FixedSingle;
             txtAddress.BorderStyle = BorderStyle.FixedSingle;
             txtContact.BorderStyle = BorderStyle.FixedSingle;
@@ -106,9 +113,31 @@ namespace Butcher_shop
             txtAddress.Font = new Font("Segoe UI", 11);
             txtContact.Font = new Font("Segoe UI", 11);
 
+            txtName.Width = textboxWidth;
+            txtAddress.Width = textboxWidth;
+            txtContact.Width = textboxWidth;
+
             txtName.Height = 30;
             txtAddress.Height = 30;
             txtContact.Height = 30;
+
+            // NAME
+            lblName.Location = new Point(labelLeft, currentTop);
+            txtName.Location = new Point(textboxLeft, currentTop + 25);
+
+            currentTop += 75;
+
+            // ADDRESS
+            lblAddress.Location = new Point(labelLeft, currentTop);
+            txtAddress.Location = new Point(textboxLeft, currentTop + 25);
+
+            currentTop += 75;
+
+            // CONTACT
+            lblContact.Location = new Point(labelLeft, currentTop);
+            txtContact.Location = new Point(textboxLeft, currentTop + 25);
+
+            currentTop += 60;
 
             // SAVE BUTTON
             btnSave.FlatStyle = FlatStyle.Flat;
@@ -116,25 +145,21 @@ namespace Butcher_shop
             btnSave.BackColor = Color.SeaGreen;
             btnSave.ForeColor = Color.White;
             btnSave.Font = new Font("Segoe UI", 11, FontStyle.Bold);
-            btnSave.Height = 40;
-            btnSave.Width = 140;
+            btnSave.Size = new Size(130, 40);
 
             // CANCEL BUTTON
             btnCancel.FlatStyle = FlatStyle.Flat;
             btnCancel.FlatAppearance.BorderSize = 0;
             btnCancel.BackColor = Color.LightGray;
             btnCancel.Font = new Font("Segoe UI", 10);
-            btnCancel.Height = 40;
-            btnCancel.Width = 120;
+            btnCancel.Size = new Size(110, 40);
 
-            // SPACING BETWEEN BUTTONS
-            btnSave.Location = new Point(70, 240);
-            btnCancel.Location = new Point(btnSave.Right + 20, 240);
+            // CENTER BUTTONS
+            int centerX = (this.Width / 2) - 140;
 
-            // ensure cancel works
-            btnCancel.Click += btnCancel_Click;
+            btnSave.Location = new Point(centerX, currentTop);
+            btnCancel.Location = new Point(centerX + 150, currentTop);
         }
-
         private void btnSave_Click(object sender, EventArgs e)
         {
             string name = txtName.Text;
@@ -160,7 +185,7 @@ namespace Butcher_shop
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
     }
 }

@@ -16,6 +16,8 @@
         private void InitializeComponent()
         {
             pnlProductsToolbar = new Panel();
+            btnProductDelete = new Button();
+            btnProductEdit = new Button();
             btnProductRefresh = new Button();
             btnProductAdd = new Button();
             lblProductsTitle = new Label();
@@ -28,8 +30,6 @@
             prodColPrice = new DataGridViewTextBoxColumn();
             prodColStock = new DataGridViewTextBoxColumn();
             prodColStatus = new DataGridViewTextBoxColumn();
-            btnProductEdit = new Button();
-            btnProductDelete = new Button();
             pnlProductsToolbar.SuspendLayout();
             pnlProductsList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvProducts).BeginInit();
@@ -50,6 +50,34 @@
             pnlProductsToolbar.Size = new Size(1200, 70);
             pnlProductsToolbar.TabIndex = 1;
             // 
+            // btnProductDelete
+            // 
+            btnProductDelete.BackColor = Color.Firebrick;
+            btnProductDelete.FlatStyle = FlatStyle.Flat;
+            btnProductDelete.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            btnProductDelete.ForeColor = Color.White;
+            btnProductDelete.Location = new Point(984, 16);
+            btnProductDelete.Name = "btnProductDelete";
+            btnProductDelete.Size = new Size(120, 35);
+            btnProductDelete.TabIndex = 4;
+            btnProductDelete.Text = "Delete Product";
+            btnProductDelete.UseVisualStyleBackColor = false;
+            btnProductDelete.Click += btnProductDelete_Click;
+            // 
+            // btnProductEdit
+            // 
+            btnProductEdit.BackColor = Color.DarkOrange;
+            btnProductEdit.FlatStyle = FlatStyle.Flat;
+            btnProductEdit.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            btnProductEdit.ForeColor = Color.White;
+            btnProductEdit.Location = new Point(840, 16);
+            btnProductEdit.Name = "btnProductEdit";
+            btnProductEdit.Size = new Size(120, 35);
+            btnProductEdit.TabIndex = 3;
+            btnProductEdit.Text = "Edit Product";
+            btnProductEdit.UseVisualStyleBackColor = false;
+            btnProductEdit.Click += btnProductEdit_Click;
+            // 
             // btnProductRefresh
             // 
             btnProductRefresh.BackColor = Color.SteelBlue;
@@ -62,6 +90,7 @@
             btnProductRefresh.TabIndex = 0;
             btnProductRefresh.Text = "Refresh";
             btnProductRefresh.UseVisualStyleBackColor = false;
+            btnProductRefresh.Click += btnProductRefresh_Click;
             // 
             // btnProductAdd
             // 
@@ -75,6 +104,7 @@
             btnProductAdd.TabIndex = 1;
             btnProductAdd.Text = "Add Product";
             btnProductAdd.UseVisualStyleBackColor = false;
+            btnProductAdd.Click += btnProductAdd_Click;
             // 
             // lblProductsTitle
             // 
@@ -104,15 +134,7 @@
             dgvProducts.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvProducts.BackgroundColor = Color.White;
             dgvProducts.ColumnHeadersHeight = 29;
-            dgvProducts.Columns.AddRange(new DataGridViewColumn[] {
-    prodColID,
-    prodColName,
-    prodColCategory,
-    prodColUnit,
-    prodColPrice,
-    prodColStock,
-    prodColStatus
-});
+            dgvProducts.Columns.AddRange(new DataGridViewColumn[] { prodColID, prodColName, prodColCategory, prodColUnit, prodColPrice, prodColStock, prodColStatus });
             dgvProducts.Dock = DockStyle.Fill;
             dgvProducts.Location = new Point(20, 20);
             dgvProducts.Name = "dgvProducts";
@@ -122,84 +144,63 @@
             dgvProducts.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvProducts.Size = new Size(1160, 590);
             dgvProducts.TabIndex = 0;
+            dgvProducts.CellContentClick += dgvProducts_CellContentClick;
             // 
             // prodColID
             // 
-            // product_id
             prodColID.DataPropertyName = "product_id";
             prodColID.HeaderText = "product_id";
             prodColID.MinimumWidth = 6;
             prodColID.Name = "prodColID";
             prodColID.ReadOnly = true;
-
-            // product_name
+            // 
+            // prodColName
+            // 
             prodColName.DataPropertyName = "product_name";
             prodColName.HeaderText = "product_name";
             prodColName.MinimumWidth = 6;
             prodColName.Name = "prodColName";
             prodColName.ReadOnly = true;
-
-            // product_category
-            // product_cat_type
+            // 
+            // prodColCategory
+            // 
             prodColCategory.DataPropertyName = "product_cat_type";
             prodColCategory.HeaderText = "Category";
             prodColCategory.MinimumWidth = 6;
             prodColCategory.Name = "prodColCategory";
             prodColCategory.ReadOnly = true;
-
-            // product_unit
+            // 
+            // prodColUnit
+            // 
             prodColUnit.DataPropertyName = "product_unit";
             prodColUnit.HeaderText = "product_unit";
             prodColUnit.MinimumWidth = 6;
             prodColUnit.Name = "prodColUnit";
             prodColUnit.ReadOnly = true;
-
-            // product_price
+            // 
+            // prodColPrice
+            // 
             prodColPrice.DataPropertyName = "product_price";
             prodColPrice.HeaderText = "product_price";
             prodColPrice.MinimumWidth = 6;
             prodColPrice.Name = "prodColPrice";
             prodColPrice.ReadOnly = true;
-
-            // product_stock
-            // product_stock_level
+            // 
+            // prodColStock
+            // 
             prodColStock.DataPropertyName = "product_stock_level";
             prodColStock.HeaderText = "Stock";
             prodColStock.MinimumWidth = 6;
             prodColStock.Name = "prodColStock";
             prodColStock.ReadOnly = true;
-
-            // is_active
+            // 
+            // prodColStatus
+            // 
             prodColStatus.DataPropertyName = "is_active";
             prodColStatus.HeaderText = "is_active";
             prodColStatus.MinimumWidth = 6;
             prodColStatus.Name = "prodColStatus";
             prodColStatus.ReadOnly = true;
-
-
-            btnProductEdit.BackColor = Color.DarkOrange;
-            btnProductEdit.FlatStyle = FlatStyle.Flat;
-            btnProductEdit.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            btnProductEdit.ForeColor = Color.White;
-            btnProductEdit.Location = new Point(840, 16);
-            btnProductEdit.Name = "btnProductEdit";
-            btnProductEdit.Size = new Size(120, 35);
-            btnProductEdit.TabIndex = 3;
-            btnProductEdit.Text = "Edit Product";
-            btnProductEdit.UseVisualStyleBackColor = false;
-            // 
-            // btnProductDelete
-            // 
-            btnProductDelete.BackColor = Color.Firebrick;
-            btnProductDelete.FlatStyle = FlatStyle.Flat;
-            btnProductDelete.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            btnProductDelete.ForeColor = Color.White;
-            btnProductDelete.Location = new Point(984, 16);
-            btnProductDelete.Name = "btnProductDelete";
-            btnProductDelete.Size = new Size(120, 35);
-            btnProductDelete.TabIndex = 4;
-            btnProductDelete.Text = "Delete Product";
-            btnProductDelete.UseVisualStyleBackColor = false;
             // 
             // ProductsControl
             // 
@@ -214,7 +215,7 @@
             ((System.ComponentModel.ISupportInitialize)dgvProducts).EndInit();
             ResumeLayout(false);
 
-         
+
         }
 
         private Panel pnlProductsToolbar;

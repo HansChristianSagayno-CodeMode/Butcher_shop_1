@@ -67,6 +67,7 @@ namespace Butcher_shop
             btnInventoryRefresh.TabIndex = 2;
             btnInventoryRefresh.Text = "Refresh";
             btnInventoryRefresh.UseVisualStyleBackColor = false;
+            btnInventoryRefresh.Click += btnInventoryRefresh_Click;
             // 
             // btnUpdateQuantity
             // 
@@ -80,6 +81,7 @@ namespace Butcher_shop
             btnUpdateQuantity.TabIndex = 1;
             btnUpdateQuantity.Text = "Update Quantity";
             btnUpdateQuantity.UseVisualStyleBackColor = false;
+            btnUpdateQuantity.Click += btnUpdateQuantity_Click;
             // 
             // lblInventoryTitle
             // 
@@ -122,44 +124,50 @@ namespace Butcher_shop
             dgvInventory.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvInventory.Size = new Size(1160, 590);
             dgvInventory.TabIndex = 0;
+            dgvInventory.CellContentClick += dgvInventory_CellContentClick;
             // 
             // invColProductID
             // 
-            // product_id
-            // invColProductID
             invColProductID.DataPropertyName = "product_id";
             invColProductID.HeaderText = "Product ID";
             invColProductID.MinimumWidth = 6;
             invColProductID.Name = "invColProductID";
             invColProductID.ReadOnly = true;
-
+            // 
             // invColProductName
+            // 
             invColProductName.DataPropertyName = "product_name";
             invColProductName.HeaderText = "Product Name";
             invColProductName.MinimumWidth = 6;
             invColProductName.Name = "invColProductName";
             invColProductName.ReadOnly = true;
-
+            // 
             // invColQuantity
+            // 
             invColQuantity.DataPropertyName = "product_stock_level";
             invColQuantity.HeaderText = "Stock Level";
             invColQuantity.MinimumWidth = 6;
             invColQuantity.Name = "invColQuantity";
             invColQuantity.ReadOnly = true;
-
+            // 
             // invColUnit
+            // 
             invColUnit.DataPropertyName = "product_unit";
             invColUnit.HeaderText = "Unit";
             invColUnit.MinimumWidth = 6;
             invColUnit.Name = "invColUnit";
             invColUnit.ReadOnly = true;
-
+            // 
             // invColStatus
+            // 
             invColStatus.DataPropertyName = "is_active";
             invColStatus.HeaderText = "Active";
             invColStatus.MinimumWidth = 6;
             invColStatus.Name = "invColStatus";
             invColStatus.ReadOnly = true;
+            // 
+            // InventoryControl
+            // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.WhiteSmoke;
