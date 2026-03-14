@@ -35,8 +35,8 @@
             dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
             lblRecentTransactionsTitle = new Label();
+            dataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
             panelSummaryCards.SuspendLayout();
             cardTotalProducts.SuspendLayout();
             cardLowStock.SuspendLayout();
@@ -69,6 +69,7 @@
             cardTotalProducts.Name = "cardTotalProducts";
             cardTotalProducts.Size = new Size(250, 120);
             cardTotalProducts.TabIndex = 0;
+            cardTotalProducts.Paint += cardTotalProducts_Paint;
             // 
             // lblTotalProductsTitle
             // 
@@ -100,6 +101,7 @@
             cardLowStock.Name = "cardLowStock";
             cardLowStock.Size = new Size(250, 120);
             cardLowStock.TabIndex = 1;
+            cardLowStock.Paint += cardLowStock_Paint_1;
             // 
             // lblLowStockTitle
             // 
@@ -131,6 +133,7 @@
             cardTransactions.Name = "cardTransactions";
             cardTransactions.Size = new Size(250, 120);
             cardTransactions.TabIndex = 2;
+            cardTransactions.Paint += cardTransactions_Paint;
             // 
             // lblTransactionsTitle
             // 
@@ -162,6 +165,7 @@
             cardSales.Name = "cardSales";
             cardSales.Size = new Size(250, 120);
             cardSales.TabIndex = 3;
+            cardSales.Paint += cardSales_Paint;
             // 
             // lblSalesTitle
             // 
@@ -201,13 +205,7 @@
             dgvTransactions.AllowUserToDeleteRows = false;
             dgvTransactions.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvTransactions.ColumnHeadersHeight = 29;
-            dgvTransactions.Columns.AddRange(new DataGridViewColumn[] {
-    dataGridViewTextBoxColumn1,
-    dataGridViewTextBoxColumn2,
-    dataGridViewTextBoxColumn3,
-    dataGridViewTextBoxColumn4,
-    dataGridViewTextBoxColumn5
-});
+            dgvTransactions.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn5 });
             dgvTransactions.Dock = DockStyle.Fill;
             dgvTransactions.Location = new Point(20, 43);
             dgvTransactions.Name = "dgvTransactions";
@@ -258,12 +256,6 @@
             dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn6
-            // 
-            dataGridViewTextBoxColumn6.MinimumWidth = 6;
-            dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
             // lblRecentTransactionsTitle
             // 
             lblRecentTransactionsTitle.Dock = DockStyle.Top;
@@ -274,6 +266,13 @@
             lblRecentTransactionsTitle.Size = new Size(1100, 23);
             lblRecentTransactionsTitle.TabIndex = 1;
             lblRecentTransactionsTitle.Text = "Recent Transactions";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            dataGridViewTextBoxColumn6.MinimumWidth = 6;
+            dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            dataGridViewTextBoxColumn6.ReadOnly = true;
+            dataGridViewTextBoxColumn6.Width = 125;
             // 
             // DashboardControl
             // 

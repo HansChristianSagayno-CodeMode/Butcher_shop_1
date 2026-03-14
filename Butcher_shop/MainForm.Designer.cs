@@ -135,7 +135,7 @@
             btnSupply.Name = "btnSupply";
             btnSupply.Size = new Size(240, 60);
             btnSupply.TabIndex = 12;
-            btnSupply.Text = "Supply";
+            btnSupply.Text = "Suppliers";
             btnSupply.TextAlign = ContentAlignment.MiddleLeft;
             btnSupply.UseVisualStyleBackColor = false;
             btnSupply.Click += btnSupply_Click;
@@ -169,7 +169,7 @@
             btnSuppliers.Name = "btnSuppliers";
             btnSuppliers.Size = new Size(240, 60);
             btnSuppliers.TabIndex = 10;
-            btnSuppliers.Text = "Suppliers";
+            btnSuppliers.Text = "Supply";
             btnSuppliers.TextAlign = ContentAlignment.MiddleLeft;
             btnSuppliers.UseVisualStyleBackColor = false;
             btnSuppliers.Click += btnSuppliers_Click;
