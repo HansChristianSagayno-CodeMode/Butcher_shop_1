@@ -72,6 +72,7 @@
             btnLogout1.TabIndex = 2;
             btnLogout1.Text = "Logout";
             btnLogout1.UseVisualStyleBackColor = false;
+            btnLogout1.Click += btnLogout1_Click;
             // 
             // lblStoreName
             // 

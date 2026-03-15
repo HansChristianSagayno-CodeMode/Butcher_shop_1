@@ -6,11 +6,11 @@ using System.Windows.Forms;
 
 namespace Butcher_shop
 {
-    public partial class OwnerLoginForm : Form
+    public partial class EmployeeLoginForm : Form
     {
         string connString = "server=localhost;user=root;password=;database=butcher_shop_db;";
 
-        public OwnerLoginForm()
+        public EmployeeLoginForm()
         {
             InitializeComponent();
         }
@@ -24,8 +24,8 @@ namespace Butcher_shop
             {
                 conn.Open();
 
-                string query = @"SELECT * FROM OWNER 
-                                 WHERE username=@username 
+                string query = @"SELECT * FROM EMPLOYEE
+                                 WHERE username=@username
                                  AND password=@password";
 
                 MySqlCommand cmd = new MySqlCommand(query, conn);
@@ -37,10 +37,10 @@ namespace Butcher_shop
 
                 if (reader.HasRows)
                 {
-                    MessageBox.Show("Owner Login Successful");
+                    MessageBox.Show("Employee Login Successful");
 
-                    MainForm main = new MainForm();
-                    main.Show();
+                    EmployeeMainForm emp = new EmployeeMainForm();
+                    emp.Show();
 
                     this.Hide();
                 }
