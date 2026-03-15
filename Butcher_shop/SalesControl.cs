@@ -13,6 +13,8 @@ namespace Butcher_shop
         public SalesControl()
         {
             InitializeComponent();
+
+            // Applies the new design system to both tables
             StyleGrid(dgvTransactions);
             StyleGrid(dgvTransactionDetails);
 
@@ -21,36 +23,33 @@ namespace Butcher_shop
 
         private void StyleGrid(DataGridView grid)
         {
+            grid.BackgroundColor = Color.White;
+            grid.BorderStyle = BorderStyle.None;
+            grid.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            grid.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+
             grid.EnableHeadersVisualStyles = false;
-
-            // Header style
-            grid.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(40, 40, 40);
+            grid.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(46, 125, 50);
             grid.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-            grid.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 11, FontStyle.Bold);
-            grid.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            grid.ColumnHeadersDefaultCellStyle.Font = new Font("Roboto", 11F, FontStyle.Bold);
+            grid.ColumnHeadersHeight = 45;
 
-            grid.ColumnHeadersHeight = 40;
-
-            // Cell style
-            grid.DefaultCellStyle.Font = new Font("Segoe UI", 11);
-            grid.DefaultCellStyle.SelectionBackColor = Color.FromArgb(0, 120, 215);
+            grid.DefaultCellStyle.BackColor = Color.White;
+            grid.DefaultCellStyle.ForeColor = Color.FromArgb(33, 33, 33);
+            grid.DefaultCellStyle.Font = new Font("Roboto", 10F);
+            grid.DefaultCellStyle.SelectionBackColor = Color.FromArgb(245, 124, 0);
             grid.DefaultCellStyle.SelectionForeColor = Color.White;
+            grid.DefaultCellStyle.Padding = new Padding(5, 0, 0, 0);
 
-            grid.RowTemplate.Height = 40;
+            grid.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(250, 250, 250);
 
-            // Alternate row color
-            grid.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(245, 245, 245);
-
-            // Grid settings
+            grid.GridColor = Color.FromArgb(235, 235, 235);
+            grid.RowTemplate.Height = 45;
             grid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             grid.MultiSelect = false;
             grid.RowHeadersVisible = false;
-
-            grid.BorderStyle = BorderStyle.None;
-            grid.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            grid.GridColor = Color.LightGray;
-
-            grid.BackgroundColor = Color.White;
+            grid.ReadOnly = true;
+            grid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         private void LoadTransactions()
@@ -115,6 +114,7 @@ namespace Butcher_shop
         {
 
         }
+
         private void btnSalesReload_Click(object sender, EventArgs e)
         {
             LoadTransactions();

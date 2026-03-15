@@ -17,6 +17,7 @@
 
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnClose;
 
         protected override void Dispose(bool disposing)
         {
@@ -30,139 +31,70 @@
 
         private void InitializeComponent()
         {
-            lblTitle = new Label();
-            lblOwner = new Label();
-            lblName = new Label();
-            lblContact = new Label();
-            lblRole = new Label();
-            txtOwnerID = new TextBox();
-            txtEmployeeName = new TextBox();
-            txtContact = new TextBox();
-            txtRole = new TextBox();
-            btnSave = new Button();
-            btnCancel = new Button();
-            SuspendLayout();
-            // 
-            // lblTitle
-            // 
-            lblTitle.AutoSize = true;
-            lblTitle.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
-            lblTitle.Location = new Point(90, 20);
-            lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(237, 32);
-            lblTitle.TabIndex = 0;
-            lblTitle.Text = "Add New Employee";
-            // 
-            // lblOwner
-            // 
-            lblOwner.AutoSize = true;
-            lblOwner.Location = new Point(40, 80);
-            lblOwner.Name = "lblOwner";
-            lblOwner.Size = new Size(71, 20);
-            lblOwner.TabIndex = 1;
-            lblOwner.Text = "Owner ID";
-            // 
-            // lblName
-            // 
-            lblName.AutoSize = true;
-            lblName.Location = new Point(40, 120);
-            lblName.Name = "lblName";
-            lblName.Size = new Size(119, 20);
-            lblName.TabIndex = 3;
-            lblName.Text = "Employee Name";
-            // 
-            // lblContact
-            // 
-            lblContact.AutoSize = true;
-            lblContact.Location = new Point(40, 160);
-            lblContact.Name = "lblContact";
-            lblContact.Size = new Size(60, 20);
-            lblContact.TabIndex = 5;
-            lblContact.Text = "Contact";
-            // 
-            // lblRole
-            // 
-            lblRole.AutoSize = true;
-            lblRole.Location = new Point(40, 200);
-            lblRole.Name = "lblRole";
-            lblRole.Size = new Size(39, 20);
-            lblRole.TabIndex = 7;
-            lblRole.Text = "Role";
-            // 
-            // txtOwnerID
-            // 
-            txtOwnerID.Location = new Point(150, 75);
-            txtOwnerID.Name = "txtOwnerID";
-            txtOwnerID.Size = new Size(180, 27);
-            txtOwnerID.TabIndex = 2;
-            // 
-            // txtEmployeeName
-            // 
-            txtEmployeeName.Location = new Point(150, 115);
-            txtEmployeeName.Name = "txtEmployeeName";
-            txtEmployeeName.Size = new Size(180, 27);
-            txtEmployeeName.TabIndex = 4;
-            // 
-            // txtContact
-            // 
-            txtContact.Location = new Point(150, 155);
-            txtContact.Name = "txtContact";
-            txtContact.Size = new Size(180, 27);
-            txtContact.TabIndex = 6;
-            // 
-            // txtRole
-            // 
-            txtRole.Location = new Point(150, 195);
-            txtRole.Name = "txtRole";
-            txtRole.Size = new Size(180, 27);
-            txtRole.TabIndex = 8;
-            // 
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.lblOwner = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblContact = new System.Windows.Forms.Label();
+            this.lblRole = new System.Windows.Forms.Label();
+
+            this.txtOwnerID = new System.Windows.Forms.TextBox();
+            this.txtEmployeeName = new System.Windows.Forms.TextBox();
+            this.txtContact = new System.Windows.Forms.TextBox();
+            this.txtRole = new System.Windows.Forms.TextBox();
+
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
+
+            this.SuspendLayout();
+
+            // Note: Exact positions, sizing, and fonts are managed dynamically in ApplyStylesAndLayout()
+            // Instantiation is kept here to prevent null references and preserve original event wires.
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Text = "Add New Employee";
+            this.lblTitle.AutoSize = true;
+
             // btnSave
-            // 
-            btnSave.BackColor = Color.SeaGreen;
-            btnSave.FlatStyle = FlatStyle.Flat;
-            btnSave.ForeColor = Color.White;
-            btnSave.Location = new Point(90, 260);
-            btnSave.Name = "btnSave";
-            btnSave.Size = new Size(90, 34);
-            btnSave.TabIndex = 9;
-            btnSave.Text = "Save";
-            btnSave.UseVisualStyleBackColor = false;
-            btnSave.Click += btnSave_Click;
-            // 
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+
             // btnCancel
-            // 
-            btnCancel.BackColor = Color.IndianRed;
-            btnCancel.FlatStyle = FlatStyle.Flat;
-            btnCancel.ForeColor = Color.White;
-            btnCancel.Location = new Point(210, 260);
-            btnCancel.Name = "btnCancel";
-            btnCancel.Size = new Size(90, 34);
-            btnCancel.TabIndex = 10;
-            btnCancel.Text = "Cancel";
-            btnCancel.UseVisualStyleBackColor = false;
-            btnCancel.Click += btnCancel_Click;
-            // 
-            // AddEmployeeForm
-            // 
-            BackColor = Color.White;
-            ClientSize = new Size(400, 350);
-            Controls.Add(lblTitle);
-            Controls.Add(lblOwner);
-            Controls.Add(txtOwnerID);
-            Controls.Add(lblName);
-            Controls.Add(txtEmployeeName);
-            Controls.Add(lblContact);
-            Controls.Add(txtContact);
-            Controls.Add(lblRole);
-            Controls.Add(txtRole);
-            Controls.Add(btnSave);
-            Controls.Add(btnCancel);
-            Name = "AddEmployeeForm";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "Add Employee";
-            ResumeLayout(false);
-            PerformLayout();
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+
+            // AddEmployeeForm Configuration
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            // Increased height from 320 to 380 to cleanly fit 4 input rows plus the title
+            this.ClientSize = new System.Drawing.Size(450, 380);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.BackColor = System.Drawing.Color.White;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.MinimumSize = new System.Drawing.Size(420, 350);
+
+            // Add Controls
+            this.Controls.Add(this.lblTitle);
+            this.Controls.Add(this.lblOwner);
+            this.Controls.Add(this.txtOwnerID);
+            this.Controls.Add(this.lblName);
+            this.Controls.Add(this.txtEmployeeName);
+            this.Controls.Add(this.lblContact);
+            this.Controls.Add(this.txtContact);
+            this.Controls.Add(this.lblRole);
+            this.Controls.Add(this.txtRole);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnClose);
+
+            this.Name = "AddEmployeeForm";
+            this.Text = "Add Employee";
+
+            this.ResumeLayout(false);
+            this.PerformLayout();
         }
     }
 }

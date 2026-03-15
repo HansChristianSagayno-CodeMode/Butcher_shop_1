@@ -2,15 +2,8 @@
 {
     partial class SalesControl
     {
-        /// <summary> 
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary> 
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -21,29 +14,24 @@
         }
 
         #region Component Designer generated code
-
-        /// <summary> 
-        /// Required method for Designer support - do not modify 
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
-            pnlSalesToolbar = new Panel();
-            btnSalesReload = new Button();
-            btnSalesCreate = new Button();
-            lblSalesPageTitle = new Label();
-            pnlSalesList = new Panel();
-            dgvTransactionDetails = new DataGridView();
-            detailColTransID = new DataGridViewTextBoxColumn();
-            detailColProduct = new DataGridViewTextBoxColumn();
-            detailColQty = new DataGridViewTextBoxColumn();
-            detailColPrice = new DataGridViewTextBoxColumn();
-            dgvTransactions = new DataGridView();
-            transColID = new DataGridViewTextBoxColumn();
-            transColCustomer = new DataGridViewTextBoxColumn();
-            transColEmployee = new DataGridViewTextBoxColumn();
-            transColTotal = new DataGridViewTextBoxColumn();
-            transColDate = new DataGridViewTextBoxColumn();
+            pnlSalesToolbar = new System.Windows.Forms.Panel();
+            btnSalesReload = new System.Windows.Forms.Button();
+            btnSalesCreate = new System.Windows.Forms.Button();
+            lblSalesPageTitle = new System.Windows.Forms.Label();
+            pnlSalesList = new System.Windows.Forms.Panel();
+            dgvTransactionDetails = new System.Windows.Forms.DataGridView();
+            detailColTransID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            detailColProduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            detailColQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            detailColPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgvTransactions = new System.Windows.Forms.DataGridView();
+            transColID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            transColCustomer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            transColEmployee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            transColTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            transColDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             pnlSalesToolbar.SuspendLayout();
             pnlSalesList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvTransactionDetails).BeginInit();
@@ -52,26 +40,26 @@
             // 
             // pnlSalesToolbar
             // 
-            pnlSalesToolbar.BackColor = Color.White;
+            pnlSalesToolbar.BackColor = System.Drawing.Color.White;
             pnlSalesToolbar.Controls.Add(btnSalesReload);
             pnlSalesToolbar.Controls.Add(btnSalesCreate);
             pnlSalesToolbar.Controls.Add(lblSalesPageTitle);
-            pnlSalesToolbar.Dock = DockStyle.Top;
-            pnlSalesToolbar.Location = new Point(0, 0);
+            pnlSalesToolbar.Dock = System.Windows.Forms.DockStyle.Top;
+            pnlSalesToolbar.Location = new System.Drawing.Point(0, 0);
             pnlSalesToolbar.Name = "pnlSalesToolbar";
-            pnlSalesToolbar.Padding = new Padding(20, 10, 20, 10);
-            pnlSalesToolbar.Size = new Size(1200, 70);
+            pnlSalesToolbar.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
+            pnlSalesToolbar.Size = new System.Drawing.Size(1200, 70);
             pnlSalesToolbar.TabIndex = 0;
             // 
             // btnSalesReload
             // 
-            btnSalesReload.BackColor = Color.SteelBlue;
-            btnSalesReload.FlatStyle = FlatStyle.Flat;
-            btnSalesReload.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            btnSalesReload.ForeColor = Color.White;
-            btnSalesReload.Location = new Point(993, 22);
+            btnSalesReload.BackColor = System.Drawing.Color.SteelBlue;
+            btnSalesReload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnSalesReload.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            btnSalesReload.ForeColor = System.Drawing.Color.White;
+            btnSalesReload.Location = new System.Drawing.Point(993, 22);
             btnSalesReload.Name = "btnSalesReload";
-            btnSalesReload.Size = new Size(120, 35);
+            btnSalesReload.Size = new System.Drawing.Size(120, 35);
             btnSalesReload.TabIndex = 2;
             btnSalesReload.Text = " Refresh";
             btnSalesReload.UseVisualStyleBackColor = false;
@@ -79,13 +67,13 @@
             // 
             // btnSalesCreate
             // 
-            btnSalesCreate.BackColor = Color.ForestGreen;
-            btnSalesCreate.FlatStyle = FlatStyle.Flat;
-            btnSalesCreate.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            btnSalesCreate.ForeColor = Color.White;
-            btnSalesCreate.Location = new Point(813, 22);
+            btnSalesCreate.BackColor = System.Drawing.Color.ForestGreen;
+            btnSalesCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnSalesCreate.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            btnSalesCreate.ForeColor = System.Drawing.Color.White;
+            btnSalesCreate.Location = new System.Drawing.Point(813, 22);
             btnSalesCreate.Name = "btnSalesCreate";
-            btnSalesCreate.Size = new Size(120, 35);
+            btnSalesCreate.Size = new System.Drawing.Size(120, 35);
             btnSalesCreate.TabIndex = 1;
             btnSalesCreate.Text = "New Sale";
             btnSalesCreate.UseVisualStyleBackColor = false;
@@ -94,12 +82,12 @@
             // lblSalesPageTitle
             // 
             lblSalesPageTitle.AutoSize = true;
-            lblSalesPageTitle.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
-            lblSalesPageTitle.ForeColor = Color.Black;
-            lblSalesPageTitle.Location = new Point(13, 10);
+            lblSalesPageTitle.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            lblSalesPageTitle.ForeColor = System.Drawing.Color.Black;
+            lblSalesPageTitle.Location = new System.Drawing.Point(13, 10);
             lblSalesPageTitle.Name = "lblSalesPageTitle";
-            lblSalesPageTitle.Padding = new Padding(20, 10, 20, 10);
-            lblSalesPageTitle.Size = new Size(261, 52);
+            lblSalesPageTitle.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
+            lblSalesPageTitle.Size = new System.Drawing.Size(261, 52);
             lblSalesPageTitle.TabIndex = 1;
             lblSalesPageTitle.Text = "Sales Transactions";
             // 
@@ -107,26 +95,54 @@
             // 
             pnlSalesList.Controls.Add(dgvTransactionDetails);
             pnlSalesList.Controls.Add(dgvTransactions);
-            pnlSalesList.Dock = DockStyle.Fill;
-            pnlSalesList.Location = new Point(0, 70);
+            pnlSalesList.Dock = System.Windows.Forms.DockStyle.Fill;
+            pnlSalesList.Location = new System.Drawing.Point(0, 70);
             pnlSalesList.Name = "pnlSalesList";
-            pnlSalesList.Padding = new Padding(20);
-            pnlSalesList.Size = new Size(1200, 630);
+            pnlSalesList.Padding = new System.Windows.Forms.Padding(20);
+            pnlSalesList.Size = new System.Drawing.Size(1200, 630);
             pnlSalesList.TabIndex = 1;
             // 
             // dgvTransactionDetails
             // 
+            // --- UI UPDATE: NEW STANDARDIZED DESIGN SYSTEM APPLIED HERE ---
+            dgvTransactionDetails.BackgroundColor = System.Drawing.Color.White;
+            dgvTransactionDetails.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dgvTransactionDetails.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvTransactionDetails.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+
+            dgvTransactionDetails.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dgvTransactionDetails.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            dgvTransactionDetails.MultiSelect = false;
+            dgvTransactionDetails.ReadOnly = true;
+            dgvTransactionDetails.RowHeadersVisible = false;
+
             dgvTransactionDetails.AllowUserToAddRows = false;
             dgvTransactionDetails.AllowUserToDeleteRows = false;
-            dgvTransactionDetails.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvTransactionDetails.BackgroundColor = Color.White;
-            dgvTransactionDetails.ColumnHeadersHeight = 29;
-            dgvTransactionDetails.Columns.AddRange(new DataGridViewColumn[] { detailColTransID, detailColProduct, detailColQty, detailColPrice });
-            dgvTransactionDetails.Dock = DockStyle.Fill;
-            dgvTransactionDetails.Location = new Point(20, 270);
+            dgvTransactionDetails.AutoGenerateColumns = false;
+
+            dgvTransactionDetails.EnableHeadersVisualStyles = false;
+            dgvTransactionDetails.ColumnHeadersDefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(46, 125, 50);
+            dgvTransactionDetails.ColumnHeadersDefaultCellStyle.ForeColor = System.Drawing.Color.White;
+            dgvTransactionDetails.ColumnHeadersDefaultCellStyle.Font = new System.Drawing.Font("Roboto", 11F, System.Drawing.FontStyle.Bold);
+            dgvTransactionDetails.ColumnHeadersHeight = 45;
+
+            dgvTransactionDetails.DefaultCellStyle.BackColor = System.Drawing.Color.White;
+            dgvTransactionDetails.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(33, 33, 33);
+            dgvTransactionDetails.DefaultCellStyle.Font = new System.Drawing.Font("Roboto", 10F);
+            dgvTransactionDetails.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(245, 124, 0);
+            dgvTransactionDetails.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
+            dgvTransactionDetails.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+
+            dgvTransactionDetails.AlternatingRowsDefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(250, 250, 250);
+            dgvTransactionDetails.GridColor = System.Drawing.Color.FromArgb(235, 235, 235);
+            dgvTransactionDetails.RowTemplate.Height = 45;
+            // -------------------------------------------------------------
+
+            dgvTransactionDetails.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { detailColTransID, detailColProduct, detailColQty, detailColPrice });
+            dgvTransactionDetails.Dock = System.Windows.Forms.DockStyle.Fill;
+            dgvTransactionDetails.Location = new System.Drawing.Point(20, 270);
             dgvTransactionDetails.Name = "dgvTransactionDetails";
-            dgvTransactionDetails.RowHeadersWidth = 51;
-            dgvTransactionDetails.Size = new Size(1160, 340);
+            dgvTransactionDetails.Size = new System.Drawing.Size(1160, 340);
             dgvTransactionDetails.TabIndex = 0;
             dgvTransactionDetails.CellContentClick += dgvTransactionDetails_CellContentClick;
             // 
@@ -136,6 +152,7 @@
             detailColTransID.HeaderText = "Transaction ID";
             detailColTransID.MinimumWidth = 6;
             detailColTransID.Name = "detailColTransID";
+            detailColTransID.ReadOnly = true;
             // 
             // detailColProduct
             // 
@@ -143,6 +160,7 @@
             detailColProduct.HeaderText = "Product ID";
             detailColProduct.MinimumWidth = 6;
             detailColProduct.Name = "detailColProduct";
+            detailColProduct.ReadOnly = true;
             // 
             // detailColQty
             // 
@@ -150,6 +168,7 @@
             detailColQty.HeaderText = "Quantity Sold";
             detailColQty.MinimumWidth = 6;
             detailColQty.Name = "detailColQty";
+            detailColQty.ReadOnly = true;
             // 
             // detailColPrice
             // 
@@ -157,22 +176,52 @@
             detailColPrice.HeaderText = "Unit Price";
             detailColPrice.MinimumWidth = 6;
             detailColPrice.Name = "detailColPrice";
+            detailColPrice.ReadOnly = true;
             // 
             // dgvTransactions
             // 
+            // --- UI UPDATE: NEW STANDARDIZED DESIGN SYSTEM APPLIED HERE ---
+            dgvTransactions.BackgroundColor = System.Drawing.Color.White;
+            dgvTransactions.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dgvTransactions.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvTransactions.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+
+            dgvTransactions.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dgvTransactions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            dgvTransactions.MultiSelect = false;
+            dgvTransactions.ReadOnly = true;
+            dgvTransactions.RowHeadersVisible = false;
+
             dgvTransactions.AllowUserToAddRows = false;
             dgvTransactions.AllowUserToDeleteRows = false;
-            dgvTransactions.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvTransactions.BackgroundColor = Color.White;
-            dgvTransactions.ColumnHeadersHeight = 29;
-            dgvTransactions.Columns.AddRange(new DataGridViewColumn[] { transColID, transColCustomer, transColEmployee, transColTotal, transColDate });
-            dgvTransactions.Dock = DockStyle.Top;
-            dgvTransactions.Location = new Point(20, 20);
+            dgvTransactions.AutoGenerateColumns = false;
+
+            dgvTransactions.EnableHeadersVisualStyles = false;
+            dgvTransactions.ColumnHeadersDefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(46, 125, 50);
+            dgvTransactions.ColumnHeadersDefaultCellStyle.ForeColor = System.Drawing.Color.White;
+            dgvTransactions.ColumnHeadersDefaultCellStyle.Font = new System.Drawing.Font("Roboto", 11F, System.Drawing.FontStyle.Bold);
+            dgvTransactions.ColumnHeadersHeight = 45;
+
+            dgvTransactions.DefaultCellStyle.BackColor = System.Drawing.Color.White;
+            dgvTransactions.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(33, 33, 33);
+            dgvTransactions.DefaultCellStyle.Font = new System.Drawing.Font("Roboto", 10F);
+            dgvTransactions.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(245, 124, 0);
+            dgvTransactions.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
+            dgvTransactions.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+
+            dgvTransactions.AlternatingRowsDefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(250, 250, 250);
+            dgvTransactions.GridColor = System.Drawing.Color.FromArgb(235, 235, 235);
+            dgvTransactions.RowTemplate.Height = 45;
+            // -------------------------------------------------------------
+
+            dgvTransactions.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { transColID, transColCustomer, transColEmployee, transColTotal, transColDate });
+            dgvTransactions.Dock = System.Windows.Forms.DockStyle.Top;
+            dgvTransactions.Location = new System.Drawing.Point(20, 20);
             dgvTransactions.Name = "dgvTransactions";
-            dgvTransactions.RowHeadersWidth = 51;
-            dgvTransactions.Size = new Size(1160, 250);
+            dgvTransactions.Size = new System.Drawing.Size(1160, 250);
             dgvTransactions.TabIndex = 1;
             dgvTransactions.CellContentClick += dgvTransactions_CellContentClick;
+            dgvTransactions.CellClick += dgvTransactions_CellClick; // IMPORTANT: Wired up CellClick for your master-detail logic
             // 
             // transColID
             // 
@@ -180,6 +229,7 @@
             transColID.HeaderText = "Transaction ID";
             transColID.MinimumWidth = 6;
             transColID.Name = "transColID";
+            transColID.ReadOnly = true;
             // 
             // transColCustomer
             // 
@@ -187,6 +237,7 @@
             transColCustomer.HeaderText = "Customer ID";
             transColCustomer.MinimumWidth = 6;
             transColCustomer.Name = "transColCustomer";
+            transColCustomer.ReadOnly = true;
             // 
             // transColEmployee
             // 
@@ -194,6 +245,7 @@
             transColEmployee.HeaderText = "Employee ID";
             transColEmployee.MinimumWidth = 6;
             transColEmployee.Name = "transColEmployee";
+            transColEmployee.ReadOnly = true;
             // 
             // transColTotal
             // 
@@ -201,6 +253,7 @@
             transColTotal.HeaderText = "Total Amount";
             transColTotal.MinimumWidth = 6;
             transColTotal.Name = "transColTotal";
+            transColTotal.ReadOnly = true;
             // 
             // transColDate
             // 
@@ -208,16 +261,17 @@
             transColDate.HeaderText = "Date";
             transColDate.MinimumWidth = 6;
             transColDate.Name = "transColDate";
+            transColDate.ReadOnly = true;
             // 
             // SalesControl
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.WhiteSmoke;
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackColor = System.Drawing.Color.WhiteSmoke;
             Controls.Add(pnlSalesList);
             Controls.Add(pnlSalesToolbar);
             Name = "SalesControl";
-            Size = new Size(1200, 700);
+            Size = new System.Drawing.Size(1200, 700);
             pnlSalesToolbar.ResumeLayout(false);
             pnlSalesToolbar.PerformLayout();
             pnlSalesList.ResumeLayout(false);
@@ -225,30 +279,24 @@
             ((System.ComponentModel.ISupportInitialize)dgvTransactions).EndInit();
             ResumeLayout(false);
         }
-
         #endregion
-
-        private Panel pnlSalesToolbar;
-        private Label lblSalesPageTitle;
-        private Button btnSalesCreate;
-        private Button btnSalesReload;
-        private Panel pnlSalesList;
-        private DataGridView dgvTransactions;
-        private DataGridView dgvTransactionDetails;
-
+        private System.Windows.Forms.Panel pnlSalesToolbar;
+        private System.Windows.Forms.Label lblSalesPageTitle;
+        private System.Windows.Forms.Button btnSalesCreate;
+        private System.Windows.Forms.Button btnSalesReload;
+        private System.Windows.Forms.Panel pnlSalesList;
+        private System.Windows.Forms.DataGridView dgvTransactions;
+        private System.Windows.Forms.DataGridView dgvTransactionDetails;
         // Transactions columns
-        private DataGridViewTextBoxColumn transColID;
-        private DataGridViewTextBoxColumn transColCustomer;
-        private DataGridViewTextBoxColumn transColEmployee;
-        private DataGridViewTextBoxColumn transColTotal;
-        private DataGridViewTextBoxColumn transColDate;
-
+        private System.Windows.Forms.DataGridViewTextBoxColumn transColID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn transColCustomer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn transColEmployee;
+        private System.Windows.Forms.DataGridViewTextBoxColumn transColTotal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn transColDate;
         // Transaction details columns
-        private DataGridViewTextBoxColumn detailColTransID;
-        private DataGridViewTextBoxColumn detailColProduct;
-        private DataGridViewTextBoxColumn detailColQty;
-        private DataGridViewTextBoxColumn detailColPrice;
-
-
+        private System.Windows.Forms.DataGridViewTextBoxColumn detailColTransID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn detailColProduct;
+        private System.Windows.Forms.DataGridViewTextBoxColumn detailColQty;
+        private System.Windows.Forms.DataGridViewTextBoxColumn detailColPrice;
     }
 }

@@ -3,7 +3,6 @@
     partial class ProductsControl
     {
         private System.ComponentModel.IContainer components = null;
-
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -12,24 +11,23 @@
             }
             base.Dispose(disposing);
         }
-
         private void InitializeComponent()
         {
-            pnlProductsToolbar = new Panel();
-            btnProductDelete = new Button();
-            btnProductEdit = new Button();
-            btnProductRefresh = new Button();
-            btnProductAdd = new Button();
-            lblProductsTitle = new Label();
-            pnlProductsList = new Panel();
-            dgvProducts = new DataGridView();
-            prodColID = new DataGridViewTextBoxColumn();
-            prodColName = new DataGridViewTextBoxColumn();
-            prodColCategory = new DataGridViewTextBoxColumn();
-            prodColUnit = new DataGridViewTextBoxColumn();
-            prodColPrice = new DataGridViewTextBoxColumn();
-            prodColStock = new DataGridViewTextBoxColumn();
-            prodColStatus = new DataGridViewTextBoxColumn();
+            pnlProductsToolbar = new System.Windows.Forms.Panel();
+            btnProductDelete = new System.Windows.Forms.Button();
+            btnProductEdit = new System.Windows.Forms.Button();
+            btnProductRefresh = new System.Windows.Forms.Button();
+            btnProductAdd = new System.Windows.Forms.Button();
+            lblProductsTitle = new System.Windows.Forms.Label();
+            pnlProductsList = new System.Windows.Forms.Panel();
+            dgvProducts = new System.Windows.Forms.DataGridView();
+            prodColID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            prodColName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            prodColCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            prodColUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            prodColPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            prodColStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            prodColStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             pnlProductsToolbar.SuspendLayout();
             pnlProductsList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvProducts).BeginInit();
@@ -37,28 +35,28 @@
             // 
             // pnlProductsToolbar
             // 
-            pnlProductsToolbar.BackColor = Color.White;
+            pnlProductsToolbar.BackColor = System.Drawing.Color.White;
             pnlProductsToolbar.Controls.Add(btnProductDelete);
             pnlProductsToolbar.Controls.Add(btnProductEdit);
             pnlProductsToolbar.Controls.Add(btnProductRefresh);
             pnlProductsToolbar.Controls.Add(btnProductAdd);
             pnlProductsToolbar.Controls.Add(lblProductsTitle);
-            pnlProductsToolbar.Dock = DockStyle.Top;
-            pnlProductsToolbar.Location = new Point(0, 0);
+            pnlProductsToolbar.Dock = System.Windows.Forms.DockStyle.Top;
+            pnlProductsToolbar.Location = new System.Drawing.Point(0, 0);
             pnlProductsToolbar.Name = "pnlProductsToolbar";
-            pnlProductsToolbar.Padding = new Padding(20, 10, 20, 10);
-            pnlProductsToolbar.Size = new Size(1200, 70);
+            pnlProductsToolbar.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
+            pnlProductsToolbar.Size = new System.Drawing.Size(1200, 70);
             pnlProductsToolbar.TabIndex = 1;
             // 
             // btnProductDelete
             // 
-            btnProductDelete.BackColor = Color.Firebrick;
-            btnProductDelete.FlatStyle = FlatStyle.Flat;
-            btnProductDelete.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            btnProductDelete.ForeColor = Color.White;
-            btnProductDelete.Location = new Point(984, 16);
+            btnProductDelete.BackColor = System.Drawing.Color.Firebrick;
+            btnProductDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnProductDelete.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            btnProductDelete.ForeColor = System.Drawing.Color.White;
+            btnProductDelete.Location = new System.Drawing.Point(984, 16);
             btnProductDelete.Name = "btnProductDelete";
-            btnProductDelete.Size = new Size(120, 35);
+            btnProductDelete.Size = new System.Drawing.Size(120, 35);
             btnProductDelete.TabIndex = 4;
             btnProductDelete.Text = "Delete Product";
             btnProductDelete.UseVisualStyleBackColor = false;
@@ -66,13 +64,13 @@
             // 
             // btnProductEdit
             // 
-            btnProductEdit.BackColor = Color.DarkOrange;
-            btnProductEdit.FlatStyle = FlatStyle.Flat;
-            btnProductEdit.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            btnProductEdit.ForeColor = Color.White;
-            btnProductEdit.Location = new Point(840, 16);
+            btnProductEdit.BackColor = System.Drawing.Color.DarkOrange;
+            btnProductEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnProductEdit.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            btnProductEdit.ForeColor = System.Drawing.Color.White;
+            btnProductEdit.Location = new System.Drawing.Point(840, 16);
             btnProductEdit.Name = "btnProductEdit";
-            btnProductEdit.Size = new Size(120, 35);
+            btnProductEdit.Size = new System.Drawing.Size(120, 35);
             btnProductEdit.TabIndex = 3;
             btnProductEdit.Text = "Edit Product";
             btnProductEdit.UseVisualStyleBackColor = false;
@@ -80,13 +78,13 @@
             // 
             // btnProductRefresh
             // 
-            btnProductRefresh.BackColor = Color.SteelBlue;
-            btnProductRefresh.FlatStyle = FlatStyle.Flat;
-            btnProductRefresh.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            btnProductRefresh.ForeColor = Color.White;
-            btnProductRefresh.Location = new Point(694, 16);
+            btnProductRefresh.BackColor = System.Drawing.Color.SteelBlue;
+            btnProductRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnProductRefresh.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            btnProductRefresh.ForeColor = System.Drawing.Color.White;
+            btnProductRefresh.Location = new System.Drawing.Point(694, 16);
             btnProductRefresh.Name = "btnProductRefresh";
-            btnProductRefresh.Size = new Size(120, 35);
+            btnProductRefresh.Size = new System.Drawing.Size(120, 35);
             btnProductRefresh.TabIndex = 0;
             btnProductRefresh.Text = "Refresh";
             btnProductRefresh.UseVisualStyleBackColor = false;
@@ -94,13 +92,13 @@
             // 
             // btnProductAdd
             // 
-            btnProductAdd.BackColor = Color.ForestGreen;
-            btnProductAdd.FlatStyle = FlatStyle.Flat;
-            btnProductAdd.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            btnProductAdd.ForeColor = Color.White;
-            btnProductAdd.Location = new Point(541, 16);
+            btnProductAdd.BackColor = System.Drawing.Color.ForestGreen;
+            btnProductAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnProductAdd.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            btnProductAdd.ForeColor = System.Drawing.Color.White;
+            btnProductAdd.Location = new System.Drawing.Point(541, 16);
             btnProductAdd.Name = "btnProductAdd";
-            btnProductAdd.Size = new Size(120, 35);
+            btnProductAdd.Size = new System.Drawing.Size(120, 35);
             btnProductAdd.TabIndex = 1;
             btnProductAdd.Text = "Add Product";
             btnProductAdd.UseVisualStyleBackColor = false;
@@ -109,40 +107,69 @@
             // lblProductsTitle
             // 
             lblProductsTitle.AutoSize = true;
-            lblProductsTitle.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
-            lblProductsTitle.ForeColor = Color.Black;
-            lblProductsTitle.Location = new Point(20, 15);
+            lblProductsTitle.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            lblProductsTitle.ForeColor = System.Drawing.Color.Black;
+            lblProductsTitle.Location = new System.Drawing.Point(20, 15);
             lblProductsTitle.Name = "lblProductsTitle";
-            lblProductsTitle.Size = new Size(263, 32);
+            lblProductsTitle.Size = new System.Drawing.Size(263, 32);
             lblProductsTitle.TabIndex = 2;
             lblProductsTitle.Text = "Product Management";
             // 
             // pnlProductsList
             // 
             pnlProductsList.Controls.Add(dgvProducts);
-            pnlProductsList.Dock = DockStyle.Fill;
-            pnlProductsList.Location = new Point(0, 70);
+            pnlProductsList.Dock = System.Windows.Forms.DockStyle.Fill;
+            pnlProductsList.Location = new System.Drawing.Point(0, 70);
             pnlProductsList.Name = "pnlProductsList";
-            pnlProductsList.Padding = new Padding(20);
-            pnlProductsList.Size = new Size(1200, 630);
+            pnlProductsList.Padding = new System.Windows.Forms.Padding(20);
+            pnlProductsList.Size = new System.Drawing.Size(1200, 630);
             pnlProductsList.TabIndex = 0;
             // 
             // dgvProducts
             // 
+            // --- UI UPDATE: NEW STANDARDIZED DESIGN SYSTEM APPLIED HERE ---
+            dgvProducts.BackgroundColor = System.Drawing.Color.White;
+            dgvProducts.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dgvProducts.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvProducts.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+
+            dgvProducts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dgvProducts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            dgvProducts.MultiSelect = false;
+            dgvProducts.ReadOnly = true;
+            dgvProducts.RowHeadersVisible = false;
+
+            // Maintained from original setup
             dgvProducts.AllowUserToAddRows = false;
             dgvProducts.AllowUserToDeleteRows = false;
-            dgvProducts.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvProducts.BackgroundColor = Color.White;
-            dgvProducts.ColumnHeadersHeight = 29;
-            dgvProducts.Columns.AddRange(new DataGridViewColumn[] { prodColID, prodColName, prodColCategory, prodColUnit, prodColPrice, prodColStock, prodColStatus });
-            dgvProducts.Dock = DockStyle.Fill;
-            dgvProducts.Location = new Point(20, 20);
+            dgvProducts.AutoGenerateColumns = false; // Added to prevent duplicate columns
+
+            // Styling for readability
+            dgvProducts.EnableHeadersVisualStyles = false;
+
+            dgvProducts.ColumnHeadersDefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(46, 125, 50);
+            dgvProducts.ColumnHeadersDefaultCellStyle.ForeColor = System.Drawing.Color.White;
+            dgvProducts.ColumnHeadersDefaultCellStyle.Font = new System.Drawing.Font("Roboto", 11F, System.Drawing.FontStyle.Bold);
+            dgvProducts.ColumnHeadersHeight = 45;
+
+            dgvProducts.DefaultCellStyle.BackColor = System.Drawing.Color.White;
+            dgvProducts.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(33, 33, 33);
+            dgvProducts.DefaultCellStyle.Font = new System.Drawing.Font("Roboto", 10F);
+            dgvProducts.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(245, 124, 0);
+            dgvProducts.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
+            dgvProducts.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+
+            dgvProducts.AlternatingRowsDefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(250, 250, 250);
+
+            dgvProducts.GridColor = System.Drawing.Color.FromArgb(235, 235, 235);
+            dgvProducts.RowTemplate.Height = 45;
+            // -------------------------------------------------------------
+
+            dgvProducts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { prodColID, prodColName, prodColCategory, prodColUnit, prodColPrice, prodColStock, prodColStatus });
+            dgvProducts.Dock = System.Windows.Forms.DockStyle.Fill;
+            dgvProducts.Location = new System.Drawing.Point(20, 20);
             dgvProducts.Name = "dgvProducts";
-            dgvProducts.ReadOnly = true;
-            dgvProducts.RowHeadersWidth = 51;
-            dgvProducts.RowTemplate.Height = 30;
-            dgvProducts.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvProducts.Size = new Size(1160, 590);
+            dgvProducts.Size = new System.Drawing.Size(1160, 590);
             dgvProducts.TabIndex = 0;
             dgvProducts.CellContentClick += dgvProducts_CellContentClick;
             // 
@@ -204,39 +231,32 @@
             // 
             // ProductsControl
             // 
-            BackColor = Color.WhiteSmoke;
+            BackColor = System.Drawing.Color.WhiteSmoke;
             Controls.Add(pnlProductsList);
             Controls.Add(pnlProductsToolbar);
             Name = "ProductsControl";
-            Size = new Size(1200, 700);
+            Size = new System.Drawing.Size(1200, 700);
             pnlProductsToolbar.ResumeLayout(false);
             pnlProductsToolbar.PerformLayout();
             pnlProductsList.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvProducts).EndInit();
             ResumeLayout(false);
-
-
         }
+        private System.Windows.Forms.Panel pnlProductsToolbar;
+        private System.Windows.Forms.Label lblProductsTitle;
+        private System.Windows.Forms.Button btnProductAdd;
+        private System.Windows.Forms.Button btnProductRefresh;
+        private System.Windows.Forms.Panel pnlProductsList;
+        private System.Windows.Forms.DataGridView dgvProducts;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prodColID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prodColName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prodColPrice;
 
-        private Panel pnlProductsToolbar;
-        private Label lblProductsTitle;
-        private Button btnProductAdd;
-        private Button btnProductRefresh;
-        private Panel pnlProductsList;
-        private DataGridView dgvProducts;
-
-        private DataGridViewTextBoxColumn prodColID;
-        private DataGridViewTextBoxColumn prodColName;
-        private DataGridViewTextBoxColumn prodColPrice;
-      
-        private DataGridViewTextBoxColumn prodColUnit;
-        private DataGridViewTextBoxColumn prodColStatus;
-        private Button btnProductDelete;
-        private Button btnProductEdit;
-
-        private DataGridViewTextBoxColumn prodColCategory;
-        private DataGridViewTextBoxColumn prodColStock;
-
-
+        private System.Windows.Forms.DataGridViewTextBoxColumn prodColUnit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prodColStatus;
+        private System.Windows.Forms.Button btnProductDelete;
+        private System.Windows.Forms.Button btnProductEdit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prodColCategory;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prodColStock;
     }
 }

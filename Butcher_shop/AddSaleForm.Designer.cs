@@ -1,81 +1,118 @@
-﻿using System.Drawing.Drawing2D;
-
-namespace Butcher_shop
+﻿namespace Butcher_shop
 {
     partial class AddSaleForm
     {
-        private ComboBox cbCustomer;
-        private ComboBox cbEmployee;
-        private ComboBox cbProduct;
-        private TextBox txtPrice;
-        private TextBox txtQuantity;
-        private Button btnSave;
-        private Button btnCancel;
-        private Panel header;
+        private System.ComponentModel.IContainer components = null;
+
+        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.Label lblCustomer;
+        private System.Windows.Forms.Label lblEmployee;
+        private System.Windows.Forms.Label lblProduct;
+        private System.Windows.Forms.Label lblPrice;
+        private System.Windows.Forms.Label lblQuantity;
+
+        private System.Windows.Forms.ComboBox cbCustomer;
+        private System.Windows.Forms.ComboBox cbEmployee;
+        private System.Windows.Forms.ComboBox cbProduct;
+        private System.Windows.Forms.TextBox txtPrice;
+        private System.Windows.Forms.TextBox txtQuantity;
+
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnClose;
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+
+            base.Dispose(disposing);
+        }
 
         private void InitializeComponent()
         {
-            header = new Panel();
-            cbCustomer = new ComboBox();
-            cbEmployee = new ComboBox();
-            cbProduct = new ComboBox();
-            txtPrice = new TextBox();
-            txtQuantity = new TextBox();
-            btnSave = new Button();
-            btnCancel = new Button();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.lblCustomer = new System.Windows.Forms.Label();
+            this.lblEmployee = new System.Windows.Forms.Label();
+            this.lblProduct = new System.Windows.Forms.Label();
+            this.lblPrice = new System.Windows.Forms.Label();
+            this.lblQuantity = new System.Windows.Forms.Label();
 
-            SuspendLayout();
+            this.cbCustomer = new System.Windows.Forms.ComboBox();
+            this.cbEmployee = new System.Windows.Forms.ComboBox();
+            this.cbProduct = new System.Windows.Forms.ComboBox();
+            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.txtQuantity = new System.Windows.Forms.TextBox();
 
-            FormBorderStyle = FormBorderStyle.None;
-            BackColor = Color.White;
-            Size = new Size(420, 420);
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
 
-            header.Dock = DockStyle.Top;
-            header.Height = 60;
-            header.BackColor = Color.FromArgb(45, 45, 48);
+            this.SuspendLayout();
 
-            Controls.Add(header);
+            // Note: Exact positions, sizing, and fonts are managed dynamically in ApplyStylesAndLayout()
+            // Instantiation is kept here to prevent null references and preserve original event wires.
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Text = "Process New Sale";
+            this.lblTitle.AutoSize = true;
 
-            cbCustomer.Location = new Point(40, 80);
-            cbCustomer.Width = 320;
+            this.cbCustomer.Name = "cbCustomer";
+            this.cbCustomer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 
-            cbEmployee.Location = new Point(40, 130);
-            cbEmployee.Width = 320;
+            this.cbEmployee.Name = "cbEmployee";
+            this.cbEmployee.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 
-            cbProduct.Location = new Point(40, 180);
-            cbProduct.Width = 320;
+            this.cbProduct.Name = "cbProduct";
+            this.cbProduct.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 
-            txtPrice.Location = new Point(40, 230);
-            txtPrice.Width = 320;
-            txtPrice.PlaceholderText = "Unit Price";
+            this.txtPrice.Name = "txtPrice";
+            this.txtQuantity.Name = "txtQuantity";
 
-            txtQuantity.Location = new Point(40, 280);
-            txtQuantity.Width = 320;
-            txtQuantity.PlaceholderText = "Quantity";
+            // btnSave
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
 
-            btnSave.Text = "Save";
-            btnSave.BackColor = Color.ForestGreen;
-            btnSave.ForeColor = Color.White;
-            btnSave.FlatStyle = FlatStyle.Flat;
-            btnSave.Location = new Point(40, 330);
-            btnSave.Click += btnSave_Click;
+            // btnCancel
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
 
-            btnCancel.Text = "Cancel";
-            btnCancel.BackColor = Color.Gray;
-            btnCancel.ForeColor = Color.White;
-            btnCancel.FlatStyle = FlatStyle.Flat;
-            btnCancel.Location = new Point(220, 330);
-            btnCancel.Click += (s, e) => Close();
+            // AddSaleForm Configuration
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            // Height to fit 5 inputs cleanly
+            this.ClientSize = new System.Drawing.Size(450, 420);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.BackColor = System.Drawing.Color.White;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.MinimumSize = new System.Drawing.Size(420, 380);
 
-            Controls.Add(cbCustomer);
-            Controls.Add(cbEmployee);
-            Controls.Add(cbProduct);
-            Controls.Add(txtPrice);
-            Controls.Add(txtQuantity);
-            Controls.Add(btnSave);
-            Controls.Add(btnCancel);
+            // Add Controls
+            this.Controls.Add(this.lblTitle);
+            this.Controls.Add(this.lblCustomer);
+            this.Controls.Add(this.cbCustomer);
+            this.Controls.Add(this.lblEmployee);
+            this.Controls.Add(this.cbEmployee);
+            this.Controls.Add(this.lblProduct);
+            this.Controls.Add(this.cbProduct);
+            this.Controls.Add(this.lblPrice);
+            this.Controls.Add(this.txtPrice);
+            this.Controls.Add(this.lblQuantity);
+            this.Controls.Add(this.txtQuantity);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnClose);
 
-            ResumeLayout(false);
+            this.Name = "AddSaleForm";
+            this.Text = "Add Sale";
+
+            this.ResumeLayout(false);
+            this.PerformLayout();
         }
     }
 }

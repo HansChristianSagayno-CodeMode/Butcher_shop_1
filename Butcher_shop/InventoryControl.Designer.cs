@@ -1,18 +1,12 @@
-﻿using Org.BouncyCastle.Asn1.Crmf;
-using System.Xml.Linq;
+﻿using System.Drawing;
+using System.Windows.Forms;
 
 namespace Butcher_shop
 {
     partial class InventoryControl
     {
-        /// <summary> 
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary> 
-        /// Clean up any resources being used.
-        /// </summary>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -26,17 +20,17 @@ namespace Butcher_shop
 
         private void InitializeComponent()
         {
-            pnlInventoryToolbar = new Panel();
-            btnInventoryRefresh = new Button();
-            btnUpdateQuantity = new Button();
-            lblInventoryTitle = new Label();
-            pnlInventoryList = new Panel();
-            dgvInventory = new DataGridView();
-            invColProductID = new DataGridViewTextBoxColumn();
-            invColProductName = new DataGridViewTextBoxColumn();
-            invColQuantity = new DataGridViewTextBoxColumn();
-            invColUnit = new DataGridViewTextBoxColumn();
-            invColStatus = new DataGridViewTextBoxColumn();
+            pnlInventoryToolbar = new System.Windows.Forms.Panel();
+            btnInventoryRefresh = new System.Windows.Forms.Button();
+            btnUpdateQuantity = new System.Windows.Forms.Button();
+            lblInventoryTitle = new System.Windows.Forms.Label();
+            pnlInventoryList = new System.Windows.Forms.Panel();
+            dgvInventory = new System.Windows.Forms.DataGridView();
+            invColProductID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            invColProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            invColQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            invColUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            invColStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             pnlInventoryToolbar.SuspendLayout();
             pnlInventoryList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvInventory).BeginInit();
@@ -44,26 +38,26 @@ namespace Butcher_shop
             // 
             // pnlInventoryToolbar
             // 
-            pnlInventoryToolbar.BackColor = Color.White;
+            pnlInventoryToolbar.BackColor = System.Drawing.Color.White;
             pnlInventoryToolbar.Controls.Add(btnInventoryRefresh);
             pnlInventoryToolbar.Controls.Add(btnUpdateQuantity);
             pnlInventoryToolbar.Controls.Add(lblInventoryTitle);
-            pnlInventoryToolbar.Dock = DockStyle.Top;
-            pnlInventoryToolbar.Location = new Point(0, 0);
+            pnlInventoryToolbar.Dock = System.Windows.Forms.DockStyle.Top;
+            pnlInventoryToolbar.Location = new System.Drawing.Point(0, 0);
             pnlInventoryToolbar.Name = "pnlInventoryToolbar";
-            pnlInventoryToolbar.Padding = new Padding(20, 10, 20, 10);
-            pnlInventoryToolbar.Size = new Size(1200, 70);
+            pnlInventoryToolbar.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
+            pnlInventoryToolbar.Size = new System.Drawing.Size(1200, 70);
             pnlInventoryToolbar.TabIndex = 0;
             // 
             // btnInventoryRefresh
             // 
-            btnInventoryRefresh.BackColor = Color.SteelBlue;
-            btnInventoryRefresh.FlatStyle = FlatStyle.Flat;
-            btnInventoryRefresh.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            btnInventoryRefresh.ForeColor = Color.White;
-            btnInventoryRefresh.Location = new Point(993, 22);
+            btnInventoryRefresh.BackColor = System.Drawing.Color.SteelBlue;
+            btnInventoryRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnInventoryRefresh.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            btnInventoryRefresh.ForeColor = System.Drawing.Color.White;
+            btnInventoryRefresh.Location = new System.Drawing.Point(993, 22);
             btnInventoryRefresh.Name = "btnInventoryRefresh";
-            btnInventoryRefresh.Size = new Size(120, 35);
+            btnInventoryRefresh.Size = new System.Drawing.Size(120, 35);
             btnInventoryRefresh.TabIndex = 2;
             btnInventoryRefresh.Text = "Refresh";
             btnInventoryRefresh.UseVisualStyleBackColor = false;
@@ -71,13 +65,13 @@ namespace Butcher_shop
             // 
             // btnUpdateQuantity
             // 
-            btnUpdateQuantity.BackColor = Color.DarkGoldenrod;
-            btnUpdateQuantity.FlatStyle = FlatStyle.Flat;
-            btnUpdateQuantity.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            btnUpdateQuantity.ForeColor = Color.White;
-            btnUpdateQuantity.Location = new Point(813, 22);
+            btnUpdateQuantity.BackColor = System.Drawing.Color.DarkGoldenrod;
+            btnUpdateQuantity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnUpdateQuantity.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            btnUpdateQuantity.ForeColor = System.Drawing.Color.White;
+            btnUpdateQuantity.Location = new System.Drawing.Point(813, 22);
             btnUpdateQuantity.Name = "btnUpdateQuantity";
-            btnUpdateQuantity.Size = new Size(120, 35);
+            btnUpdateQuantity.Size = new System.Drawing.Size(120, 35);
             btnUpdateQuantity.TabIndex = 1;
             btnUpdateQuantity.Text = "Update Quantity";
             btnUpdateQuantity.UseVisualStyleBackColor = false;
@@ -86,43 +80,70 @@ namespace Butcher_shop
             // lblInventoryTitle
             // 
             lblInventoryTitle.AutoSize = true;
-            lblInventoryTitle.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
-            lblInventoryTitle.ForeColor = Color.Black;
-            lblInventoryTitle.Location = new Point(13, 10);
+            lblInventoryTitle.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            lblInventoryTitle.ForeColor = System.Drawing.Color.Black;
+            lblInventoryTitle.Location = new System.Drawing.Point(13, 10);
             lblInventoryTitle.Name = "lblInventoryTitle";
-            lblInventoryTitle.Padding = new Padding(20, 10, 20, 10);
-            lblInventoryTitle.Size = new Size(166, 52);
+            lblInventoryTitle.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
+            lblInventoryTitle.Size = new System.Drawing.Size(166, 52);
             lblInventoryTitle.TabIndex = 1;
             lblInventoryTitle.Text = "Inventory";
             // 
             // pnlInventoryList
             // 
             pnlInventoryList.Controls.Add(dgvInventory);
-            pnlInventoryList.Dock = DockStyle.Fill;
-            pnlInventoryList.Location = new Point(0, 70);
+            pnlInventoryList.Dock = System.Windows.Forms.DockStyle.Fill;
+            pnlInventoryList.Location = new System.Drawing.Point(0, 70);
             pnlInventoryList.Name = "pnlInventoryList";
-            pnlInventoryList.Padding = new Padding(20);
-            pnlInventoryList.Size = new Size(1200, 630);
+            pnlInventoryList.Padding = new System.Windows.Forms.Padding(20);
+            pnlInventoryList.Size = new System.Drawing.Size(1200, 630);
             pnlInventoryList.TabIndex = 1;
             // 
             // dgvInventory
             // 
-            dgvInventory.AllowUserToAddRows = false;
-            dgvInventory.AllowUserToDeleteRows = false;
-            dgvInventory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvInventory.BackgroundColor = Color.White;
-            dgvInventory.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvInventory.Columns.AddRange(new DataGridViewColumn[] { invColProductID, invColProductName, invColQuantity, invColUnit, invColStatus });
-            dgvInventory.Dock = DockStyle.Fill;
-            dgvInventory.Location = new Point(20, 20);
+            // --- UI UPDATE: NEW STANDARDIZED DESIGN SYSTEM APPLIED HERE ---
+            dgvInventory.BackgroundColor = System.Drawing.Color.White;
+            dgvInventory.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dgvInventory.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvInventory.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+
+            dgvInventory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dgvInventory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             dgvInventory.MultiSelect = false;
-            dgvInventory.Name = "dgvInventory";
             dgvInventory.ReadOnly = true;
             dgvInventory.RowHeadersVisible = false;
-            dgvInventory.RowHeadersWidth = 51;
-            dgvInventory.RowTemplate.Height = 30;
-            dgvInventory.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvInventory.Size = new Size(1160, 590);
+
+            // Maintained from original setup
+            dgvInventory.AllowUserToAddRows = false;
+            dgvInventory.AllowUserToDeleteRows = false;
+            dgvInventory.AutoGenerateColumns = false;
+
+            // Styling for readability
+            dgvInventory.EnableHeadersVisualStyles = false;
+
+            dgvInventory.ColumnHeadersDefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(46, 125, 50);
+            dgvInventory.ColumnHeadersDefaultCellStyle.ForeColor = System.Drawing.Color.White;
+            dgvInventory.ColumnHeadersDefaultCellStyle.Font = new System.Drawing.Font("Roboto", 11F, System.Drawing.FontStyle.Bold);
+            dgvInventory.ColumnHeadersHeight = 45;
+
+            dgvInventory.DefaultCellStyle.BackColor = System.Drawing.Color.White;
+            dgvInventory.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(33, 33, 33);
+            dgvInventory.DefaultCellStyle.Font = new System.Drawing.Font("Roboto", 10F);
+            dgvInventory.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(245, 124, 0);
+            dgvInventory.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
+            dgvInventory.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+
+            dgvInventory.AlternatingRowsDefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(250, 250, 250);
+
+            dgvInventory.GridColor = System.Drawing.Color.FromArgb(235, 235, 235);
+            dgvInventory.RowTemplate.Height = 45;
+            // -------------------------------------------------------------
+
+            dgvInventory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { invColProductID, invColProductName, invColQuantity, invColUnit, invColStatus });
+            dgvInventory.Dock = System.Windows.Forms.DockStyle.Fill;
+            dgvInventory.Location = new System.Drawing.Point(20, 20);
+            dgvInventory.Name = "dgvInventory";
+            dgvInventory.Size = new System.Drawing.Size(1160, 590);
             dgvInventory.TabIndex = 0;
             dgvInventory.CellContentClick += dgvInventory_CellContentClick;
             // 
@@ -168,13 +189,13 @@ namespace Butcher_shop
             // 
             // InventoryControl
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.WhiteSmoke;
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackColor = System.Drawing.Color.WhiteSmoke;
             Controls.Add(pnlInventoryList);
             Controls.Add(pnlInventoryToolbar);
             Name = "InventoryControl";
-            Size = new Size(1200, 700);
+            Size = new System.Drawing.Size(1200, 700);
             pnlInventoryToolbar.ResumeLayout(false);
             pnlInventoryToolbar.PerformLayout();
             pnlInventoryList.ResumeLayout(false);
@@ -184,16 +205,16 @@ namespace Butcher_shop
 
         #endregion
 
-        private Panel pnlInventoryToolbar;
-        private Label lblInventoryTitle;
-        private Button btnUpdateQuantity;
-        private Button btnInventoryRefresh;
-        private Panel pnlInventoryList;
-        private DataGridView dgvInventory;
-        private DataGridViewTextBoxColumn invColProductID;
-        private DataGridViewTextBoxColumn invColProductName;
-        private DataGridViewTextBoxColumn invColQuantity;
-        private DataGridViewTextBoxColumn invColUnit;
-        private DataGridViewTextBoxColumn invColStatus;
+        private System.Windows.Forms.Panel pnlInventoryToolbar;
+        private System.Windows.Forms.Label lblInventoryTitle;
+        private System.Windows.Forms.Button btnUpdateQuantity;
+        private System.Windows.Forms.Button btnInventoryRefresh;
+        private System.Windows.Forms.Panel pnlInventoryList;
+        private System.Windows.Forms.DataGridView dgvInventory;
+        private System.Windows.Forms.DataGridViewTextBoxColumn invColProductID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn invColProductName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn invColQuantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn invColUnit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn invColStatus;
     }
 }

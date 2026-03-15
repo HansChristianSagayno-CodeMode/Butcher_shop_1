@@ -49,38 +49,41 @@ namespace Butcher_shop
         {
             dgvInventory.EnableHeadersVisualStyles = false;
 
-            dgvInventory.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(40, 40, 40);
+            // Header Style: Using the Green Secondary Color
+            dgvInventory.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(46, 125, 50);
             dgvInventory.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-            dgvInventory.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 11, FontStyle.Bold);
+            dgvInventory.ColumnHeadersDefaultCellStyle.Font = new Font("Roboto", 11, FontStyle.Bold);
+            dgvInventory.ColumnHeadersHeight = 45;
 
-            dgvInventory.DefaultCellStyle.Font = new Font("Segoe UI", 11);
-            dgvInventory.DefaultCellStyle.SelectionBackColor = Color.FromArgb(0, 120, 215);
+            // Row Style
+            dgvInventory.DefaultCellStyle.Font = new Font("Roboto", 10);
+            dgvInventory.DefaultCellStyle.ForeColor = Color.FromArgb(33, 33, 33);
+            dgvInventory.DefaultCellStyle.SelectionBackColor = Color.FromArgb(245, 124, 0); // Orange Selection
             dgvInventory.DefaultCellStyle.SelectionForeColor = Color.White;
 
-            dgvInventory.RowTemplate.Height = 40;
+            dgvInventory.RowTemplate.Height = 45;
+            dgvInventory.BackgroundColor = Color.White;
+            dgvInventory.GridColor = Color.FromArgb(235, 235, 235);
 
-            dgvInventory.GridColor = Color.LightGray;
-
-            dgvInventory.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(245, 245, 245);
+            // Subtle Alternating Rows
+            dgvInventory.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(250, 250, 250);
 
             dgvInventory.BorderStyle = BorderStyle.None;
-
             dgvInventory.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-
             dgvInventory.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-
             dgvInventory.MultiSelect = false;
-
             dgvInventory.RowHeadersVisible = false;
 
-            // Better column sizing
-            dgvInventory.Columns[0].FillWeight = 15;
-            dgvInventory.Columns[1].FillWeight = 20;
-            dgvInventory.Columns[2].FillWeight = 20;
-            dgvInventory.Columns[3].FillWeight = 20;
-            dgvInventory.Columns[4].FillWeight = 25;
+            // Column Fill Weights (Ensuring total visibility)
+            if (dgvInventory.Columns.Count >= 5)
+            {
+                dgvInventory.Columns[0].FillWeight = 15;
+                dgvInventory.Columns[1].FillWeight = 15;
+                dgvInventory.Columns[2].FillWeight = 20;
+                dgvInventory.Columns[3].FillWeight = 20;
+                dgvInventory.Columns[4].FillWeight = 30;
+            }
 
-            // Disable sorting for simplicity
             foreach (DataGridViewColumn col in dgvInventory.Columns)
             {
                 col.SortMode = DataGridViewColumnSortMode.NotSortable;

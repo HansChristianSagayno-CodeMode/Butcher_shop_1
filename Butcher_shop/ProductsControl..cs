@@ -1,7 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Data;
-using System.Drawing;
+using System.Drawing; // Required for styling
 using System.Windows.Forms;
 
 namespace Butcher_shop
@@ -55,40 +55,44 @@ namespace Butcher_shop
         // GRID STYLE
         private void StyleProductsGrid()
         {
-            dgvProducts.EnableHeadersVisualStyles = false;
-
-            dgvProducts.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(45, 45, 48);
-            dgvProducts.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-            dgvProducts.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-
-            dgvProducts.DefaultCellStyle.Font = new Font("Segoe UI", 11F);
-            dgvProducts.DefaultCellStyle.BackColor = Color.White;
-            dgvProducts.DefaultCellStyle.ForeColor = Color.Black;
-
-            dgvProducts.DefaultCellStyle.SelectionBackColor = Color.FromArgb(0, 120, 215);
-            dgvProducts.DefaultCellStyle.SelectionForeColor = Color.White;
-
-            dgvProducts.RowTemplate.Height = 40;
-
-            dgvProducts.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(245, 245, 245);
-
+            dgvProducts.BackgroundColor = Color.White;
             dgvProducts.BorderStyle = BorderStyle.None;
             dgvProducts.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dgvProducts.GridColor = Color.LightGray;
+            dgvProducts.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
 
+            dgvProducts.EnableHeadersVisualStyles = false;
+            dgvProducts.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(46, 125, 50);
+            dgvProducts.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dgvProducts.ColumnHeadersDefaultCellStyle.Font = new Font("Roboto", 11F, FontStyle.Bold);
+            dgvProducts.ColumnHeadersHeight = 45;
+
+            dgvProducts.DefaultCellStyle.BackColor = Color.White;
+            dgvProducts.DefaultCellStyle.ForeColor = Color.FromArgb(33, 33, 33);
+            dgvProducts.DefaultCellStyle.Font = new Font("Roboto", 10F);
+            dgvProducts.DefaultCellStyle.SelectionBackColor = Color.FromArgb(245, 124, 0);
+            dgvProducts.DefaultCellStyle.SelectionForeColor = Color.White;
+            dgvProducts.DefaultCellStyle.Padding = new Padding(5, 0, 0, 0);
+
+            dgvProducts.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(250, 250, 250);
+
+            dgvProducts.GridColor = Color.FromArgb(235, 235, 235);
+            dgvProducts.RowTemplate.Height = 45;
             dgvProducts.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvProducts.MultiSelect = false;
             dgvProducts.RowHeadersVisible = false;
+            dgvProducts.ReadOnly = true;
+            dgvProducts.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-            // column width balance
-            dgvProducts.Columns["prodColID"].FillWeight = 10;
-            dgvProducts.Columns["prodColName"].FillWeight = 25;
-            dgvProducts.Columns["prodColCategory"].FillWeight = 20;
-            dgvProducts.Columns["prodColUnit"].FillWeight = 10;
-            dgvProducts.Columns["prodColPrice"].FillWeight = 15;
-            dgvProducts.Columns["prodColStock"].FillWeight = 10;
-            dgvProducts.Columns["prodColStatus"].FillWeight = 10;
+            // Maintained your column width balance
+            if (dgvProducts.Columns.Contains("prodColID")) dgvProducts.Columns["prodColID"].FillWeight = 10;
+            if (dgvProducts.Columns.Contains("prodColName")) dgvProducts.Columns["prodColName"].FillWeight = 25;
+            if (dgvProducts.Columns.Contains("prodColCategory")) dgvProducts.Columns["prodColCategory"].FillWeight = 20;
+            if (dgvProducts.Columns.Contains("prodColUnit")) dgvProducts.Columns["prodColUnit"].FillWeight = 10;
+            if (dgvProducts.Columns.Contains("prodColPrice")) dgvProducts.Columns["prodColPrice"].FillWeight = 15;
+            if (dgvProducts.Columns.Contains("prodColStock")) dgvProducts.Columns["prodColStock"].FillWeight = 10;
+            if (dgvProducts.Columns.Contains("prodColStatus")) dgvProducts.Columns["prodColStatus"].FillWeight = 10;
 
+            // Maintained disable sorting logic
             foreach (DataGridViewColumn col in dgvProducts.Columns)
                 col.SortMode = DataGridViewColumnSortMode.NotSortable;
         }

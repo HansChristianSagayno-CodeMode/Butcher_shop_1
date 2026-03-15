@@ -42,24 +42,33 @@ namespace Butcher_shop
 
         private void StyleSummaryGrid()
         {
+            dgvSummary.BackgroundColor = Color.White;
+            dgvSummary.BorderStyle = BorderStyle.None;
+            dgvSummary.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvSummary.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+
             dgvSummary.EnableHeadersVisualStyles = false;
-
-            dgvSummary.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(40, 40, 40);
+            dgvSummary.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(46, 125, 50);
             dgvSummary.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-            dgvSummary.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 11, FontStyle.Bold);
+            dgvSummary.ColumnHeadersDefaultCellStyle.Font = new Font("Roboto", 11F, FontStyle.Bold);
+            dgvSummary.ColumnHeadersHeight = 45;
 
-            dgvSummary.DefaultCellStyle.Font = new Font("Segoe UI", 11);
-            dgvSummary.DefaultCellStyle.SelectionBackColor = Color.FromArgb(0, 120, 215);
+            dgvSummary.DefaultCellStyle.BackColor = Color.White;
+            dgvSummary.DefaultCellStyle.ForeColor = Color.FromArgb(33, 33, 33);
+            dgvSummary.DefaultCellStyle.Font = new Font("Roboto", 10F);
+            dgvSummary.DefaultCellStyle.SelectionBackColor = Color.FromArgb(245, 124, 0);
+            dgvSummary.DefaultCellStyle.SelectionForeColor = Color.White;
+            dgvSummary.DefaultCellStyle.Padding = new Padding(5, 0, 0, 0);
 
-            dgvSummary.RowTemplate.Height = 40;
+            dgvSummary.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(250, 250, 250);
 
-            dgvSummary.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(245, 245, 245);
-
+            dgvSummary.GridColor = Color.FromArgb(235, 235, 235);
+            dgvSummary.RowTemplate.Height = 45;
             dgvSummary.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvSummary.MultiSelect = false;
             dgvSummary.RowHeadersVisible = false;
-
-            dgvSummary.BorderStyle = BorderStyle.None;
+            dgvSummary.ReadOnly = true;
+            dgvSummary.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
     }
 }

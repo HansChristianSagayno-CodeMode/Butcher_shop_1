@@ -14,39 +14,39 @@
 
         private void InitializeComponent()
         {
-            panelSummary = new Panel();
-            btnRefreshReports = new Button();
-            dgvSummary = new DataGridView();
-            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
-            lblSummaryTitle = new Label();
+            panelSummary = new System.Windows.Forms.Panel();
+            btnRefreshReports = new System.Windows.Forms.Button();
+            dgvSummary = new System.Windows.Forms.DataGridView();
+            dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            lblSummaryTitle = new System.Windows.Forms.Label();
             panelSummary.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvSummary).BeginInit();
             SuspendLayout();
             // 
             // panelSummary
             // 
-            panelSummary.BackColor = Color.White;
+            panelSummary.BackColor = System.Drawing.Color.White;
             panelSummary.Controls.Add(btnRefreshReports);
             panelSummary.Controls.Add(dgvSummary);
             panelSummary.Controls.Add(lblSummaryTitle);
-            panelSummary.Dock = DockStyle.Fill;
-            panelSummary.Location = new Point(30, 30);
+            panelSummary.Dock = System.Windows.Forms.DockStyle.Fill;
+            panelSummary.Location = new System.Drawing.Point(30, 30);
             panelSummary.Name = "panelSummary";
-            panelSummary.Padding = new Padding(20);
-            panelSummary.Size = new Size(1140, 640);
+            panelSummary.Padding = new System.Windows.Forms.Padding(20);
+            panelSummary.Size = new System.Drawing.Size(1140, 640);
             panelSummary.TabIndex = 0;
             // 
             // btnRefreshReports
             // 
-            btnRefreshReports.BackColor = Color.SeaGreen;
-            btnRefreshReports.FlatStyle = FlatStyle.Flat;
-            btnRefreshReports.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            btnRefreshReports.ForeColor = Color.White;
-            btnRefreshReports.Location = new Point(921, 14);
+            btnRefreshReports.BackColor = System.Drawing.Color.SeaGreen;
+            btnRefreshReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnRefreshReports.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            btnRefreshReports.ForeColor = System.Drawing.Color.White;
+            btnRefreshReports.Location = new System.Drawing.Point(921, 14);
             btnRefreshReports.Name = "btnRefreshReports";
-            btnRefreshReports.Size = new Size(120, 35);
+            btnRefreshReports.Size = new System.Drawing.Size(120, 35);
             btnRefreshReports.TabIndex = 4;
             btnRefreshReports.Text = "Refresh Reports";
             btnRefreshReports.UseVisualStyleBackColor = false;
@@ -54,17 +54,50 @@
             // 
             // dgvSummary
             // 
+            // --- UI UPDATE: NEW STANDARDIZED DESIGN SYSTEM APPLIED HERE ---
+            dgvSummary.BackgroundColor = System.Drawing.Color.White;
+            dgvSummary.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dgvSummary.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvSummary.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+
+            dgvSummary.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dgvSummary.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            dgvSummary.MultiSelect = false;
+            dgvSummary.ReadOnly = true;
+            dgvSummary.RowHeadersVisible = false;
+
+            // Maintained from original setup
             dgvSummary.AllowUserToAddRows = false;
             dgvSummary.AllowUserToDeleteRows = false;
-            dgvSummary.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvSummary.ColumnHeadersHeight = 29;
-            dgvSummary.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3 });
-            dgvSummary.Dock = DockStyle.Fill;
-            dgvSummary.Location = new Point(20, 55);
+            dgvSummary.AutoGenerateColumns = false;
+
+            // Styling for readability
+            dgvSummary.EnableHeadersVisualStyles = false;
+
+            dgvSummary.ColumnHeadersDefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(46, 125, 50);
+            dgvSummary.ColumnHeadersDefaultCellStyle.ForeColor = System.Drawing.Color.White;
+            dgvSummary.ColumnHeadersDefaultCellStyle.Font = new System.Drawing.Font("Roboto", 11F, System.Drawing.FontStyle.Bold);
+            dgvSummary.ColumnHeadersHeight = 45;
+
+            dgvSummary.DefaultCellStyle.BackColor = System.Drawing.Color.White;
+            dgvSummary.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(33, 33, 33);
+            dgvSummary.DefaultCellStyle.Font = new System.Drawing.Font("Roboto", 10F);
+            dgvSummary.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(245, 124, 0);
+            dgvSummary.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
+            dgvSummary.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+
+            dgvSummary.AlternatingRowsDefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(250, 250, 250);
+
+            dgvSummary.GridColor = System.Drawing.Color.FromArgb(235, 235, 235);
+            dgvSummary.RowTemplate.Height = 45;
+            // -------------------------------------------------------------
+
+            dgvSummary.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3 });
+            dgvSummary.Dock = System.Windows.Forms.DockStyle.Fill;
+            dgvSummary.Location = new System.Drawing.Point(20, 55);
             dgvSummary.Name = "dgvSummary";
-            dgvSummary.RowHeadersVisible = false;
             dgvSummary.RowHeadersWidth = 51;
-            dgvSummary.Size = new Size(1100, 565);
+            dgvSummary.Size = new System.Drawing.Size(1100, 565);
             dgvSummary.TabIndex = 0;
             dgvSummary.CellContentClick += dgvSummary_CellContentClick;
             // 
@@ -91,33 +124,33 @@
             // 
             // lblSummaryTitle
             // 
-            lblSummaryTitle.Dock = DockStyle.Top;
-            lblSummaryTitle.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            lblSummaryTitle.ForeColor = Color.Black;
-            lblSummaryTitle.Location = new Point(20, 20);
+            lblSummaryTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            lblSummaryTitle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            lblSummaryTitle.ForeColor = System.Drawing.Color.Black;
+            lblSummaryTitle.Location = new System.Drawing.Point(20, 20);
             lblSummaryTitle.Name = "lblSummaryTitle";
-            lblSummaryTitle.Size = new Size(1100, 35);
+            lblSummaryTitle.Size = new System.Drawing.Size(1100, 35);
             lblSummaryTitle.TabIndex = 1;
             lblSummaryTitle.Text = "Daily Sales Summary";
             // 
             // ReportsControl
             // 
-            BackColor = Color.FromArgb(242, 247, 244);
+            BackColor = System.Drawing.Color.FromArgb(242, 247, 244);
             Controls.Add(panelSummary);
             Name = "ReportsControl";
-            Padding = new Padding(30);
-            Size = new Size(1200, 700);
+            Padding = new System.Windows.Forms.Padding(30);
+            Size = new System.Drawing.Size(1200, 700);
             panelSummary.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvSummary).EndInit();
             ResumeLayout(false);
         }
 
-        private Panel panelSummary;
-        private Label lblSummaryTitle;
-        private DataGridView dgvSummary;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private Button btnRefreshReports;
+        private System.Windows.Forms.Panel panelSummary;
+        private System.Windows.Forms.Label lblSummaryTitle;
+        private System.Windows.Forms.DataGridView dgvSummary;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.Button btnRefreshReports;
     }
 }

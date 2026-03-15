@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Drawing; // Required for styling
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
@@ -82,52 +83,53 @@ namespace Butcher_shop
 
         private void StyleInventoryGrid()
         {
-            dgvInventory.EnableHeadersVisualStyles = false;
-
-            // Header style
-            dgvInventory.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(45, 45, 48);
-            dgvInventory.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-            dgvInventory.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            dgvInventory.ColumnHeadersHeight = 40;
-
-            // Default cell style
-            dgvInventory.DefaultCellStyle.BackColor = Color.White;
-            dgvInventory.DefaultCellStyle.ForeColor = Color.Black;
-            dgvInventory.DefaultCellStyle.Font = new Font("Segoe UI", 11F);
-
-            // Selection style (important fix)
-            dgvInventory.DefaultCellStyle.SelectionBackColor = Color.FromArgb(0, 120, 215);
-            dgvInventory.DefaultCellStyle.SelectionForeColor = Color.White;
-
-            // Alternating rows
-            dgvInventory.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(245, 245, 245);
-
-            // Row height
-            dgvInventory.RowTemplate.Height = 40;
-
-            // Grid appearance
-            dgvInventory.GridColor = Color.LightGray;
+            dgvInventory.BackgroundColor = Color.White;
             dgvInventory.BorderStyle = BorderStyle.None;
             dgvInventory.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvInventory.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
 
-            // Behavior
+            dgvInventory.EnableHeadersVisualStyles = false;
+            dgvInventory.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(46, 125, 50);
+            dgvInventory.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dgvInventory.ColumnHeadersDefaultCellStyle.Font = new Font("Roboto", 11F, FontStyle.Bold);
+            dgvInventory.ColumnHeadersHeight = 45;
+
+            dgvInventory.DefaultCellStyle.BackColor = Color.White;
+            dgvInventory.DefaultCellStyle.ForeColor = Color.FromArgb(33, 33, 33);
+            dgvInventory.DefaultCellStyle.Font = new Font("Roboto", 10F);
+            dgvInventory.DefaultCellStyle.SelectionBackColor = Color.FromArgb(245, 124, 0);
+            dgvInventory.DefaultCellStyle.SelectionForeColor = Color.White;
+            dgvInventory.DefaultCellStyle.Padding = new Padding(5, 0, 0, 0);
+
+            dgvInventory.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(250, 250, 250);
+
+            dgvInventory.GridColor = Color.FromArgb(235, 235, 235);
+            dgvInventory.RowTemplate.Height = 45;
             dgvInventory.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvInventory.MultiSelect = false;
             dgvInventory.RowHeadersVisible = false;
+            dgvInventory.ReadOnly = true;
+            dgvInventory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-            // Column size balancing
-            dgvInventory.Columns["invColProductID"].FillWeight = 15;
-            dgvInventory.Columns["invColProductName"].FillWeight = 35;
-            dgvInventory.Columns["invColQuantity"].FillWeight = 20;
-            dgvInventory.Columns["invColUnit"].FillWeight = 15;
-            dgvInventory.Columns["invColStatus"].FillWeight = 15;
+            // Maintained your specific column size balancing
+            if (dgvInventory.Columns.Contains("invColProductID"))
+                dgvInventory.Columns["invColProductID"].FillWeight = 15;
+            if (dgvInventory.Columns.Contains("invColProductName"))
+                dgvInventory.Columns["invColProductName"].FillWeight = 35;
+            if (dgvInventory.Columns.Contains("invColQuantity"))
+                dgvInventory.Columns["invColQuantity"].FillWeight = 20;
+            if (dgvInventory.Columns.Contains("invColUnit"))
+                dgvInventory.Columns["invColUnit"].FillWeight = 15;
+            if (dgvInventory.Columns.Contains("invColStatus"))
+                dgvInventory.Columns["invColStatus"].FillWeight = 15;
 
-            // Disable sorting
+            // Maintained sorting disable logic
             foreach (DataGridViewColumn col in dgvInventory.Columns)
             {
                 col.SortMode = DataGridViewColumnSortMode.NotSortable;
             }
         }
+
         // UPDATE DATABASE
         private void UpdateStock(int productID, int quantity)
         {

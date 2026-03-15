@@ -31,11 +31,7 @@ namespace Butcher_shop
             lblInventoryTitle = new Label();
             pnlInventoryList = new Panel();
             dgvInventory = new DataGridView();
-            invColProductID = new DataGridViewTextBoxColumn();
-            invColProductName = new DataGridViewTextBoxColumn();
-            invColQuantity = new DataGridViewTextBoxColumn();
-            invColUnit = new DataGridViewTextBoxColumn();
-            invColStatus = new DataGridViewTextBoxColumn();
+
             pnlInventoryToolbar.SuspendLayout();
             pnlInventoryList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvInventory).BeginInit();
@@ -56,9 +52,11 @@ namespace Butcher_shop
             // 
             // btnInventoryRefresh
             // 
-            btnInventoryRefresh.BackColor = Color.SteelBlue;
+            btnInventoryRefresh.BackColor = Color.FromArgb(46, 125, 50); // Secondary Green
+            btnInventoryRefresh.Cursor = Cursors.Hand;
+            btnInventoryRefresh.FlatAppearance.BorderSize = 0;
             btnInventoryRefresh.FlatStyle = FlatStyle.Flat;
-            btnInventoryRefresh.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            btnInventoryRefresh.Font = new Font("Roboto", 10F, FontStyle.Bold);
             btnInventoryRefresh.ForeColor = Color.White;
             btnInventoryRefresh.Location = new Point(993, 22);
             btnInventoryRefresh.Name = "btnInventoryRefresh";
@@ -70,13 +68,15 @@ namespace Butcher_shop
             // 
             // btnUpdateQuantity
             // 
-            btnUpdateQuantity.BackColor = Color.DarkGoldenrod;
+            btnUpdateQuantity.BackColor = Color.FromArgb(245, 124, 0); // Primary Orange
+            btnUpdateQuantity.Cursor = Cursors.Hand;
+            btnUpdateQuantity.FlatAppearance.BorderSize = 0;
             btnUpdateQuantity.FlatStyle = FlatStyle.Flat;
-            btnUpdateQuantity.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            btnUpdateQuantity.Font = new Font("Roboto", 10F, FontStyle.Bold);
             btnUpdateQuantity.ForeColor = Color.White;
             btnUpdateQuantity.Location = new Point(813, 22);
             btnUpdateQuantity.Name = "btnUpdateQuantity";
-            btnUpdateQuantity.Size = new Size(120, 35);
+            btnUpdateQuantity.Size = new Size(160, 35);
             btnUpdateQuantity.TabIndex = 1;
             btnUpdateQuantity.Text = "+ Record Stock Out";
             btnUpdateQuantity.UseVisualStyleBackColor = false;
@@ -85,8 +85,8 @@ namespace Butcher_shop
             // lblInventoryTitle
             // 
             lblInventoryTitle.AutoSize = true;
-            lblInventoryTitle.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
-            lblInventoryTitle.ForeColor = Color.Black;
+            lblInventoryTitle.Font = new Font("Roboto", 16F, FontStyle.Bold);
+            lblInventoryTitle.ForeColor = Color.FromArgb(33, 33, 33);
             lblInventoryTitle.Location = new Point(13, 10);
             lblInventoryTitle.Name = "lblInventoryTitle";
             lblInventoryTitle.Padding = new Padding(20, 10, 20, 10);
@@ -96,152 +96,97 @@ namespace Butcher_shop
             // 
             // pnlInventoryList
             // 
+            pnlInventoryList.BackColor = Color.White;
             pnlInventoryList.Controls.Add(dgvInventory);
             pnlInventoryList.Dock = DockStyle.Fill;
             pnlInventoryList.Location = new Point(0, 70);
             pnlInventoryList.Name = "pnlInventoryList";
-            pnlInventoryList.Padding = new Padding(20);
+            pnlInventoryList.Padding = new Padding(25);
             pnlInventoryList.Size = new Size(1200, 630);
             pnlInventoryList.TabIndex = 1;
             // 
             // dgvInventory
-            // =============================
-            // DataGridView Styling
-            // =============================
-
-            dgvInventory.Dock = DockStyle.Fill;
-
-            dgvInventory.BackgroundColor = Color.White;
-            dgvInventory.BorderStyle = BorderStyle.None;
-
-            dgvInventory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
-            dgvInventory.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvInventory.MultiSelect = false;
-            dgvInventory.ReadOnly = true;
-
+            // 
             dgvInventory.AllowUserToAddRows = false;
             dgvInventory.AllowUserToDeleteRows = false;
             dgvInventory.AllowUserToResizeRows = false;
+            dgvInventory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvInventory.BackgroundColor = Color.White;
+            dgvInventory.BorderStyle = BorderStyle.None;
+            dgvInventory.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvInventory.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
 
-            // Remove left selector column
+            // Header Style
+            dgvInventory.EnableHeadersVisualStyles = false;
+            dgvInventory.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(46, 125, 50); // Green Theme
+            dgvInventory.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dgvInventory.ColumnHeadersDefaultCellStyle.Font = new Font("Roboto", 11F, FontStyle.Bold);
+            dgvInventory.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(46, 125, 50);
+            dgvInventory.ColumnHeadersHeight = 45;
+
+            // Row Style
+            dgvInventory.DefaultCellStyle.BackColor = Color.White;
+            dgvInventory.DefaultCellStyle.ForeColor = Color.FromArgb(33, 33, 33);
+            dgvInventory.DefaultCellStyle.Font = new Font("Roboto", 10F);
+            dgvInventory.DefaultCellStyle.SelectionBackColor = Color.FromArgb(245, 124, 0); // Orange Highlight
+            dgvInventory.DefaultCellStyle.SelectionForeColor = Color.White;
+            dgvInventory.DefaultCellStyle.Padding = new Padding(5, 0, 0, 0);
+
+            // Alternating Style
+            dgvInventory.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(250, 250, 250);
+
+            dgvInventory.Dock = DockStyle.Fill;
+            dgvInventory.GridColor = Color.FromArgb(235, 235, 235);
+            dgvInventory.MultiSelect = false;
+            dgvInventory.ReadOnly = true;
             dgvInventory.RowHeadersVisible = false;
-
-            // Prevent duplicate columns
+            dgvInventory.RowTemplate.Height = 45;
+            dgvInventory.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvInventory.AutoGenerateColumns = false;
 
-            // Header style
-            dgvInventory.EnableHeadersVisualStyles = false;
-            dgvInventory.ColumnHeadersDefaultCellStyle.BackColor = Color.LightGray;
-            dgvInventory.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
-            dgvInventory.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            dgvInventory.ColumnHeadersHeight = 35;
-
-            // Row style
-            dgvInventory.DefaultCellStyle.BackColor = Color.White;
-            dgvInventory.DefaultCellStyle.ForeColor = Color.Black;
-            dgvInventory.DefaultCellStyle.Font = new Font("Segoe UI", 11F);
-
-            dgvInventory.DefaultCellStyle.SelectionBackColor = Color.SteelBlue;
-            dgvInventory.DefaultCellStyle.SelectionForeColor = Color.White;
-
-            // Alternating rows
-            dgvInventory.AlternatingRowsDefaultCellStyle.BackColor = Color.Gainsboro;
-
-            // Larger rows for readability
-            dgvInventory.RowTemplate.Height = 40;
-
-            // Clear columns first (prevents duplication)
+            // Define Columns
             dgvInventory.Columns.Clear();
 
-            // =============================
-            // Columns
-            // =============================
+            dgvInventory.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                Name = "stock_out_id",
+                HeaderText = "Stock Out ID",
+                DataPropertyName = "stock_out_id"
+            });
+            dgvInventory.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                Name = "product_id",
+                HeaderText = "Product ID",
+                DataPropertyName = "product_id"
+            });
+            dgvInventory.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                Name = "quantity_out",
+                HeaderText = "Quantity Out",
+                DataPropertyName = "quantity_out"
+            });
+            dgvInventory.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                Name = "stock_out_date",
+                HeaderText = "Date",
+                DataPropertyName = "stock_out_date"
+            });
+            dgvInventory.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                Name = "reason",
+                HeaderText = "Reason",
+                DataPropertyName = "reason"
+            });
 
-            // Stock Out ID
-            DataGridViewTextBoxColumn colStockID = new DataGridViewTextBoxColumn();
-            colStockID.Name = "stock_out_id";
-            colStockID.HeaderText = "Stock Out ID";
-            colStockID.DataPropertyName = "stock_out_id";
-            dgvInventory.Columns.Add(colStockID);
-
-            // Product ID
-            DataGridViewTextBoxColumn colProductID = new DataGridViewTextBoxColumn();
-            colProductID.Name = "product_id";
-            colProductID.HeaderText = "Product ID";
-            colProductID.DataPropertyName = "product_id";
-            dgvInventory.Columns.Add(colProductID);
-
-            // Quantity Out
-            DataGridViewTextBoxColumn colQty = new DataGridViewTextBoxColumn();
-            colQty.Name = "quantity_out";
-            colQty.HeaderText = "Quantity Out";
-            colQty.DataPropertyName = "quantity_out";
-            dgvInventory.Columns.Add(colQty);
-
-            // Date
-            DataGridViewTextBoxColumn colDate = new DataGridViewTextBoxColumn();
-            colDate.Name = "stock_out_date";
-            colDate.HeaderText = "Date";
-            colDate.DataPropertyName = "stock_out_date";
-            dgvInventory.Columns.Add(colDate);
-
-            // Reason
-            DataGridViewTextBoxColumn colReason = new DataGridViewTextBoxColumn();
-            colReason.Name = "reason";
-            colReason.HeaderText = "Reason";
-            colReason.DataPropertyName = "reason";
-            dgvInventory.Columns.Add(colReason);
-            // 
-            // invColProductID
-            // 
-            invColProductID.DataPropertyName = "stock_out_id";
-            invColProductID.HeaderText = "Stock Out ID";
-            invColProductID.MinimumWidth = 6;
-            invColProductID.Name = "invColProductID";
-            invColProductID.ReadOnly = true;
-            // 
-            // invColProductName
-            // 
-            invColProductName.DataPropertyName = "product_id";
-            invColProductName.HeaderText = "Product ID";
-            invColProductName.MinimumWidth = 6;
-            invColProductName.Name = "invColProductName";
-            invColProductName.ReadOnly = true;
-            // 
-            // invColQuantity
-            // 
-            invColQuantity.DataPropertyName = "quantity_out";
-            invColQuantity.HeaderText = "Quantity Out";
-            invColQuantity.MinimumWidth = 6;
-            invColQuantity.Name = "invColQuantity";
-            invColQuantity.ReadOnly = true;
-            // 
-            // invColUnit
-            // 
-            invColUnit.DataPropertyName = "stock_out_date";
-            invColUnit.HeaderText = "Date";
-            invColUnit.MinimumWidth = 6;
-            invColUnit.Name = "invColUnit";
-            invColUnit.ReadOnly = true;
-            // 
-            // invColStatus
-            // 
-            invColStatus.DataPropertyName = "reason";
-            invColStatus.HeaderText = "Reason";
-            invColStatus.MinimumWidth = 6;
-            invColStatus.Name = "invColStatus";
-            invColStatus.ReadOnly = true;
-            // 
-            // StockOutControl
-            // 
+            // Final Control Settings
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.WhiteSmoke;
+            BackColor = Color.White;
             Controls.Add(pnlInventoryList);
             Controls.Add(pnlInventoryToolbar);
             Name = "StockOutControl";
             Size = new Size(1200, 700);
+
             pnlInventoryToolbar.ResumeLayout(false);
             pnlInventoryToolbar.PerformLayout();
             pnlInventoryList.ResumeLayout(false);

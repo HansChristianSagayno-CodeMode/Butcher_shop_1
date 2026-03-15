@@ -69,33 +69,35 @@ namespace Butcher_shop
 
         private void StyleGrid()
         {
-            dgvSupply.EnableHeadersVisualStyles = false;
-
-            dgvSupply.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(45, 45, 48);
-            dgvSupply.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-            dgvSupply.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-
-            dgvSupply.DefaultCellStyle.Font = new Font("Segoe UI", 11F);
-            dgvSupply.DefaultCellStyle.BackColor = Color.White;
-            dgvSupply.DefaultCellStyle.ForeColor = Color.Black;
-
-            dgvSupply.DefaultCellStyle.SelectionBackColor = Color.FromArgb(0, 120, 215);
-            dgvSupply.DefaultCellStyle.SelectionForeColor = Color.White;
-
-            dgvSupply.RowTemplate.Height = 40;
-
-            dgvSupply.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(245, 245, 245);
-
+            dgvSupply.BackgroundColor = Color.White;
             dgvSupply.BorderStyle = BorderStyle.None;
             dgvSupply.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dgvSupply.GridColor = Color.LightGray;
+            dgvSupply.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
 
+            dgvSupply.EnableHeadersVisualStyles = false;
+            dgvSupply.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(46, 125, 50);
+            dgvSupply.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dgvSupply.ColumnHeadersDefaultCellStyle.Font = new Font("Roboto", 11F, FontStyle.Bold);
+            dgvSupply.ColumnHeadersHeight = 45;
+
+            dgvSupply.DefaultCellStyle.BackColor = Color.White;
+            dgvSupply.DefaultCellStyle.ForeColor = Color.FromArgb(33, 33, 33);
+            dgvSupply.DefaultCellStyle.Font = new Font("Roboto", 10F);
+            dgvSupply.DefaultCellStyle.SelectionBackColor = Color.FromArgb(245, 124, 0);
+            dgvSupply.DefaultCellStyle.SelectionForeColor = Color.White;
+            dgvSupply.DefaultCellStyle.Padding = new Padding(5, 0, 0, 0);
+
+            dgvSupply.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(250, 250, 250);
+
+            dgvSupply.GridColor = Color.FromArgb(235, 235, 235);
+            dgvSupply.RowTemplate.Height = 45;
             dgvSupply.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvSupply.MultiSelect = false;
             dgvSupply.RowHeadersVisible = false;
-
+            dgvSupply.ReadOnly = true;
             dgvSupply.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
+            // Preserved from original logic
             foreach (DataGridViewColumn col in dgvSupply.Columns)
                 col.SortMode = DataGridViewColumnSortMode.NotSortable;
         }

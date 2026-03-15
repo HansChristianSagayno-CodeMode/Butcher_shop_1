@@ -4,6 +4,26 @@
     {
         private System.ComponentModel.IContainer components = null;
 
+        private System.Windows.Forms.Label lblTitle;
+
+        // Added labels to match reference styling structure
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label lblCategory;
+        private System.Windows.Forms.Label lblUnit;
+        private System.Windows.Forms.Label lblPrice;
+        private System.Windows.Forms.Label lblStock;
+
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtCategory;
+        private System.Windows.Forms.TextBox txtUnit;
+        private System.Windows.Forms.TextBox txtPrice;
+        private System.Windows.Forms.TextBox txtStock;
+        private System.Windows.Forms.CheckBox chkActive;
+
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnClose;
+
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -14,101 +34,89 @@
 
         private void InitializeComponent()
         {
-            lblTitle = new Label();
-            txtName = new TextBox();
-            txtCategory = new TextBox();
-            txtUnit = new TextBox();
-            txtPrice = new TextBox();
-            txtStock = new TextBox();
-            chkActive = new CheckBox();
+            this.lblTitle = new System.Windows.Forms.Label();
 
-            btnAdd = new Button();
-            btnCancel = new Button();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblCategory = new System.Windows.Forms.Label();
+            this.lblUnit = new System.Windows.Forms.Label();
+            this.lblPrice = new System.Windows.Forms.Label();
+            this.lblStock = new System.Windows.Forms.Label();
 
-            SuspendLayout();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtCategory = new System.Windows.Forms.TextBox();
+            this.txtUnit = new System.Windows.Forms.TextBox();
+            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.txtStock = new System.Windows.Forms.TextBox();
+            this.chkActive = new System.Windows.Forms.CheckBox();
 
-            // FORM
-            BackColor = Color.White;
-            FormBorderStyle = FormBorderStyle.None;
-            StartPosition = FormStartPosition.CenterParent;
-            Size = new Size(420, 420);
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
 
-            // TITLE
-            lblTitle.Text = "Add Product";
-            lblTitle.Font = new Font("Segoe UI", 16, FontStyle.Bold);
-            lblTitle.Location = new Point(30, 20);
-            lblTitle.AutoSize = true;
+            this.SuspendLayout();
 
-            // NAME
-            txtName.PlaceholderText = "Product Name";
-            txtName.Location = new Point(40, 80);
-            txtName.Size = new Size(330, 30);
+            // Note: Exact positions, sizing, and fonts are managed dynamically in ApplyStylesAndLayout()
+            // Instantiation is kept here to prevent null references and preserve original event wires.
 
-            // CATEGORY
-            txtCategory.PlaceholderText = "Category (Pork / Beef / Chicken)";
-            txtCategory.Location = new Point(40, 130);
-            txtCategory.Size = new Size(330, 30);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Text = "Add Product";
+            this.lblTitle.AutoSize = true;
 
-            // UNIT
-            txtUnit.PlaceholderText = "Unit (kg / pcs)";
-            txtUnit.Location = new Point(40, 180);
-            txtUnit.Size = new Size(330, 30);
+            this.chkActive.Name = "chkActive";
+            this.chkActive.Text = "Product Active";
+            this.chkActive.Checked = true;
 
-            // PRICE
-            txtPrice.PlaceholderText = "Price";
-            txtPrice.Location = new Point(40, 230);
-            txtPrice.Size = new Size(330, 30);
+            // btnAdd (Functions as Save)
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Text = "Add Product";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
 
-            // STOCK
-            txtStock.PlaceholderText = "Stock Level";
-            txtStock.Location = new Point(40, 280);
-            txtStock.Size = new Size(330, 30);
+            // btnCancel
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
 
-            // ACTIVE
-            chkActive.Text = "Product Active";
-            chkActive.Location = new Point(40, 320);
-            chkActive.Checked = true;
+            // AddProductForm Configuration
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 
-            // ADD BUTTON
-            btnAdd.Text = "Add Product";
-            btnAdd.BackColor = Color.ForestGreen;
-            btnAdd.ForeColor = Color.White;
-            btnAdd.FlatStyle = FlatStyle.Flat;
-            btnAdd.Size = new Size(140, 40);
-            btnAdd.Location = new Point(50, 360);
-            btnAdd.Click += btnAdd_Click;
+            // Increased height to 460 to cleanly fit 5 inputs + checkbox + title + buttons
+            this.ClientSize = new System.Drawing.Size(450, 460);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.BackColor = System.Drawing.Color.White;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.MinimumSize = new System.Drawing.Size(420, 420);
 
-            // CANCEL BUTTON
-            btnCancel.Text = "Cancel";
-            btnCancel.BackColor = Color.Gray;
-            btnCancel.ForeColor = Color.White;
-            btnCancel.FlatStyle = FlatStyle.Flat;
-            btnCancel.Size = new Size(140, 40);
-            btnCancel.Location = new Point(210, 360);
-            btnCancel.Click += btnCancel_Click;
+            // Add Controls
+            this.Controls.Add(this.lblTitle);
 
-            Controls.Add(lblTitle);
-            Controls.Add(txtName);
-            Controls.Add(txtCategory);
-            Controls.Add(txtUnit);
-            Controls.Add(txtPrice);
-            Controls.Add(txtStock);
-            Controls.Add(chkActive);
-            Controls.Add(btnAdd);
-            Controls.Add(btnCancel);
+            this.Controls.Add(this.lblName);
+            this.Controls.Add(this.txtName);
 
-            ResumeLayout(false);
+            this.Controls.Add(this.lblCategory);
+            this.Controls.Add(this.txtCategory);
+
+            this.Controls.Add(this.lblUnit);
+            this.Controls.Add(this.txtUnit);
+
+            this.Controls.Add(this.lblPrice);
+            this.Controls.Add(this.txtPrice);
+
+            this.Controls.Add(this.lblStock);
+            this.Controls.Add(this.txtStock);
+
+            this.Controls.Add(this.chkActive);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnClose);
+
+            this.Name = "AddProductForm";
+            this.Text = "Add Product";
+
+            this.ResumeLayout(false);
+            this.PerformLayout();
         }
-
-        private Label lblTitle;
-        private TextBox txtName;
-        private TextBox txtCategory;
-        private TextBox txtUnit;
-        private TextBox txtPrice;
-        private TextBox txtStock;
-        private CheckBox chkActive;
-
-        private Button btnAdd;
-        private Button btnCancel;
     }
 }

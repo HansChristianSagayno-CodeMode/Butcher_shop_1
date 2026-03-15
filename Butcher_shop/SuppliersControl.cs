@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing; // Ensure System.Drawing is included for Color and Font
 using System.Windows.Forms;
 
 namespace Butcher_shop
@@ -68,22 +69,32 @@ namespace Butcher_shop
 
         private void StyleGrid(DataGridView dgv)
         {
+            dgv.BackgroundColor = Color.White;
+            dgv.BorderStyle = BorderStyle.None;
+            dgv.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgv.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+
             dgv.EnableHeadersVisualStyles = false;
-
-            dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(40, 40, 40);
+            dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(46, 125, 50);
             dgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-            dgv.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 11, FontStyle.Bold);
+            dgv.ColumnHeadersDefaultCellStyle.Font = new Font("Roboto", 11F, FontStyle.Bold);
+            dgv.ColumnHeadersHeight = 45;
 
-            dgv.DefaultCellStyle.Font = new Font("Segoe UI", 11);
-            dgv.DefaultCellStyle.SelectionBackColor = Color.FromArgb(0, 120, 215);
+            dgv.DefaultCellStyle.BackColor = Color.White;
+            dgv.DefaultCellStyle.ForeColor = Color.FromArgb(33, 33, 33);
+            dgv.DefaultCellStyle.Font = new Font("Roboto", 10F);
+            dgv.DefaultCellStyle.SelectionBackColor = Color.FromArgb(245, 124, 0);
+            dgv.DefaultCellStyle.SelectionForeColor = Color.White;
+            dgv.DefaultCellStyle.Padding = new Padding(5, 0, 0, 0);
 
-            dgv.RowTemplate.Height = 40;
+            dgv.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(250, 250, 250);
 
-            dgv.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(245, 245, 245);
-
+            dgv.GridColor = Color.FromArgb(235, 235, 235);
+            dgv.RowTemplate.Height = 45;
             dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgv.MultiSelect = false;
             dgv.RowHeadersVisible = false;
+            dgv.ReadOnly = true;
         }
     }
 }

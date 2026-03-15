@@ -35,19 +35,17 @@
             btnStockOut = new Button();
             btnSupply = new Button();
             button2 = new Button();
-            btnSuppliers = new Button();
-            btnExit = new Button();
             btnReports = new Button();
+            btnSuppliers = new Button();
             btnCustomers = new Button();
             btnInventory = new Button();
-            btnProducts = new Button();
             btnSales = new Button();
+            btnExit = new Button();
+            btnProducts = new Button();
             btnDashboard = new Button();
             panelContent = new Panel();
-            btnLogout = new Button();
             panelHeader.SuspendLayout();
             panelSidebar.SuspendLayout();
-            panelContent.SuspendLayout();
             SuspendLayout();
             // 
             // panelHeader
@@ -68,7 +66,7 @@
             // 
             btnLogout1.BackColor = Color.FromArgb(245, 124, 0);
             btnLogout1.FlatStyle = FlatStyle.Flat;
-            btnLogout1.Location = new Point(1219, 12);
+            btnLogout1.Location = new Point(1339, 20);
             btnLogout1.Name = "btnLogout1";
             btnLogout1.Size = new Size(110, 38);
             btnLogout1.TabIndex = 2;
@@ -92,13 +90,13 @@
             panelSidebar.Controls.Add(btnStockOut);
             panelSidebar.Controls.Add(btnSupply);
             panelSidebar.Controls.Add(button2);
-            panelSidebar.Controls.Add(btnSuppliers);
-            panelSidebar.Controls.Add(btnExit);
             panelSidebar.Controls.Add(btnReports);
+            panelSidebar.Controls.Add(btnSuppliers);
             panelSidebar.Controls.Add(btnCustomers);
             panelSidebar.Controls.Add(btnInventory);
-            panelSidebar.Controls.Add(btnProducts);
             panelSidebar.Controls.Add(btnSales);
+            panelSidebar.Controls.Add(btnExit);
+            panelSidebar.Controls.Add(btnProducts);
             panelSidebar.Controls.Add(btnDashboard);
             panelSidebar.Dock = DockStyle.Left;
             panelSidebar.Location = new Point(0, 80);
@@ -114,7 +112,7 @@
             btnStockOut.FlatStyle = FlatStyle.Flat;
             btnStockOut.Font = new Font("Corbel", 12F, FontStyle.Bold);
             btnStockOut.ForeColor = Color.White;
-            btnStockOut.Location = new Point(-6, 486);
+            btnStockOut.Location = new Point(0, 522);
             btnStockOut.Name = "btnStockOut";
             btnStockOut.Size = new Size(240, 60);
             btnStockOut.TabIndex = 13;
@@ -131,7 +129,7 @@
             btnSupply.FlatStyle = FlatStyle.Flat;
             btnSupply.Font = new Font("Corbel", 12F, FontStyle.Bold);
             btnSupply.ForeColor = Color.White;
-            btnSupply.Location = new Point(0, 435);
+            btnSupply.Location = new Point(0, 462);
             btnSupply.Name = "btnSupply";
             btnSupply.Size = new Size(240, 60);
             btnSupply.TabIndex = 12;
@@ -148,7 +146,7 @@
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Corbel", 12F, FontStyle.Bold);
             button2.ForeColor = Color.White;
-            button2.Location = new Point(-3, 383);
+            button2.Location = new Point(0, 407);
             button2.Name = "button2";
             button2.Size = new Size(240, 60);
             button2.TabIndex = 11;
@@ -156,40 +154,6 @@
             button2.TextAlign = ContentAlignment.MiddleLeft;
             button2.UseVisualStyleBackColor = false;
             button2.Click += btnEmployees_Click;
-            // 
-            // btnSuppliers
-            // 
-            btnSuppliers.BackColor = Color.FromArgb(27, 67, 50);
-            btnSuppliers.FlatAppearance.BorderColor = Color.FromArgb(0, 0, 0, 0);
-            btnSuppliers.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 106, 79);
-            btnSuppliers.FlatStyle = FlatStyle.Flat;
-            btnSuppliers.Font = new Font("Corbel", 12F, FontStyle.Bold);
-            btnSuppliers.ForeColor = Color.White;
-            btnSuppliers.Location = new Point(-6, 326);
-            btnSuppliers.Name = "btnSuppliers";
-            btnSuppliers.Size = new Size(240, 60);
-            btnSuppliers.TabIndex = 10;
-            btnSuppliers.Text = "Supply";
-            btnSuppliers.TextAlign = ContentAlignment.MiddleLeft;
-            btnSuppliers.UseVisualStyleBackColor = false;
-            btnSuppliers.Click += btnSuppliers_Click;
-            // 
-            // btnExit
-            // 
-            btnExit.BackColor = Color.FromArgb(27, 67, 50);
-            btnExit.FlatAppearance.BorderColor = Color.FromArgb(0, 0, 0, 0);
-            btnExit.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 106, 79);
-            btnExit.FlatStyle = FlatStyle.Flat;
-            btnExit.Font = new Font("Corbel", 12F, FontStyle.Bold);
-            btnExit.ForeColor = Color.White;
-            btnExit.Location = new Point(0, 537);
-            btnExit.Name = "btnExit";
-            btnExit.Size = new Size(240, 60);
-            btnExit.TabIndex = 9;
-            btnExit.Text = "Exit";
-            btnExit.TextAlign = ContentAlignment.MiddleLeft;
-            btnExit.UseVisualStyleBackColor = false;
-            btnExit.Click += btnExit_Click;
             // 
             // btnReports
             // 
@@ -199,7 +163,7 @@
             btnReports.FlatStyle = FlatStyle.Flat;
             btnReports.Font = new Font("Corbel", 12F, FontStyle.Bold);
             btnReports.ForeColor = Color.White;
-            btnReports.Location = new Point(-3, 273);
+            btnReports.Location = new Point(0, 289);
             btnReports.Name = "btnReports";
             btnReports.Size = new Size(240, 60);
             btnReports.TabIndex = 8;
@@ -207,6 +171,23 @@
             btnReports.TextAlign = ContentAlignment.MiddleLeft;
             btnReports.UseVisualStyleBackColor = false;
             btnReports.Click += btnReports_Click;
+            // 
+            // btnSuppliers
+            // 
+            btnSuppliers.BackColor = Color.FromArgb(27, 67, 50);
+            btnSuppliers.FlatAppearance.BorderColor = Color.FromArgb(0, 0, 0, 0);
+            btnSuppliers.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 106, 79);
+            btnSuppliers.FlatStyle = FlatStyle.Flat;
+            btnSuppliers.Font = new Font("Corbel", 12F, FontStyle.Bold);
+            btnSuppliers.ForeColor = Color.White;
+            btnSuppliers.Location = new Point(0, 348);
+            btnSuppliers.Name = "btnSuppliers";
+            btnSuppliers.Size = new Size(240, 60);
+            btnSuppliers.TabIndex = 10;
+            btnSuppliers.Text = "Supply";
+            btnSuppliers.TextAlign = ContentAlignment.MiddleLeft;
+            btnSuppliers.UseVisualStyleBackColor = false;
+            btnSuppliers.Click += btnSuppliers_Click;
             // 
             // btnCustomers
             // 
@@ -216,7 +197,7 @@
             btnCustomers.FlatStyle = FlatStyle.Flat;
             btnCustomers.Font = new Font("Corbel", 12F, FontStyle.Bold);
             btnCustomers.ForeColor = Color.White;
-            btnCustomers.Location = new Point(-3, 219);
+            btnCustomers.Location = new Point(0, 174);
             btnCustomers.Name = "btnCustomers";
             btnCustomers.Size = new Size(240, 60);
             btnCustomers.TabIndex = 7;
@@ -233,7 +214,7 @@
             btnInventory.FlatStyle = FlatStyle.Flat;
             btnInventory.Font = new Font("Corbel", 12F, FontStyle.Bold);
             btnInventory.ForeColor = Color.White;
-            btnInventory.Location = new Point(0, 166);
+            btnInventory.Location = new Point(0, 229);
             btnInventory.Name = "btnInventory";
             btnInventory.Size = new Size(240, 60);
             btnInventory.TabIndex = 6;
@@ -241,23 +222,6 @@
             btnInventory.TextAlign = ContentAlignment.MiddleLeft;
             btnInventory.UseVisualStyleBackColor = false;
             btnInventory.Click += btnInventory_Click;
-            // 
-            // btnProducts
-            // 
-            btnProducts.BackColor = Color.FromArgb(27, 67, 50);
-            btnProducts.FlatAppearance.BorderColor = Color.FromArgb(0, 0, 0, 0);
-            btnProducts.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 106, 79);
-            btnProducts.FlatStyle = FlatStyle.Flat;
-            btnProducts.Font = new Font("Corbel", 12F, FontStyle.Bold);
-            btnProducts.ForeColor = Color.White;
-            btnProducts.Location = new Point(0, 110);
-            btnProducts.Name = "btnProducts";
-            btnProducts.Size = new Size(240, 60);
-            btnProducts.TabIndex = 5;
-            btnProducts.Text = "Products";
-            btnProducts.TextAlign = ContentAlignment.MiddleLeft;
-            btnProducts.UseVisualStyleBackColor = false;
-            btnProducts.Click += btnProducts_Click;
             // 
             // btnSales
             // 
@@ -267,7 +231,7 @@
             btnSales.FlatStyle = FlatStyle.Flat;
             btnSales.Font = new Font("Corbel", 12F, FontStyle.Bold);
             btnSales.ForeColor = Color.White;
-            btnSales.Location = new Point(0, 55);
+            btnSales.Location = new Point(0, 58);
             btnSales.Name = "btnSales";
             btnSales.Size = new Size(240, 60);
             btnSales.TabIndex = 4;
@@ -275,6 +239,40 @@
             btnSales.TextAlign = ContentAlignment.MiddleLeft;
             btnSales.UseVisualStyleBackColor = false;
             btnSales.Click += btnSales_Click;
+            // 
+            // btnExit
+            // 
+            btnExit.BackColor = Color.FromArgb(27, 67, 50);
+            btnExit.FlatAppearance.BorderColor = Color.FromArgb(0, 0, 0, 0);
+            btnExit.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 106, 79);
+            btnExit.FlatStyle = FlatStyle.Flat;
+            btnExit.Font = new Font("Corbel", 12F, FontStyle.Bold);
+            btnExit.ForeColor = Color.White;
+            btnExit.Location = new Point(0, 582);
+            btnExit.Name = "btnExit";
+            btnExit.Size = new Size(240, 60);
+            btnExit.TabIndex = 9;
+            btnExit.Text = "Exit";
+            btnExit.TextAlign = ContentAlignment.MiddleLeft;
+            btnExit.UseVisualStyleBackColor = false;
+            btnExit.Click += btnExit_Click;
+            // 
+            // btnProducts
+            // 
+            btnProducts.BackColor = Color.FromArgb(27, 67, 50);
+            btnProducts.FlatAppearance.BorderColor = Color.FromArgb(0, 0, 0, 0);
+            btnProducts.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 106, 79);
+            btnProducts.FlatStyle = FlatStyle.Flat;
+            btnProducts.Font = new Font("Corbel", 12F, FontStyle.Bold);
+            btnProducts.ForeColor = Color.White;
+            btnProducts.Location = new Point(0, 116);
+            btnProducts.Name = "btnProducts";
+            btnProducts.Size = new Size(240, 60);
+            btnProducts.TabIndex = 5;
+            btnProducts.Text = "Products";
+            btnProducts.TextAlign = ContentAlignment.MiddleLeft;
+            btnProducts.UseVisualStyleBackColor = false;
+            btnProducts.Click += btnProducts_Click;
             // 
             // btnDashboard
             // 
@@ -297,7 +295,6 @@
             // 
             panelContent.AccessibleRole = AccessibleRole.WhiteSpace;
             panelContent.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            panelContent.Controls.Add(btnLogout);
             panelContent.Cursor = Cursors.Hand;
             panelContent.Dock = DockStyle.Fill;
             panelContent.ForeColor = Color.White;
@@ -307,17 +304,6 @@
             panelContent.Size = new Size(1242, 773);
             panelContent.TabIndex = 2;
             panelContent.Paint += panel1_Paint;
-            // 
-            // btnLogout
-            // 
-            btnLogout.BackColor = Color.FromArgb(245, 124, 0);
-            btnLogout.Location = new Point(1210, 21);
-            btnLogout.Name = "btnLogout";
-            btnLogout.Size = new Size(110, 38);
-            btnLogout.TabIndex = 1;
-            btnLogout.Text = "Logout";
-            btnLogout.UseVisualStyleBackColor = false;
-            btnLogout.Click += button1_Click;
             // 
             // MainForm
             // 
@@ -337,7 +323,6 @@
             panelHeader.ResumeLayout(false);
             panelHeader.PerformLayout();
             panelSidebar.ResumeLayout(false);
-            panelContent.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -346,7 +331,6 @@
         private Panel panelHeader;
         private Panel panelSidebar;
         private Panel panelContent;
-        private Button btnLogout;
         private Label lblStoreName;
         private Button btnLogout1;
         private Button btnDashboard;

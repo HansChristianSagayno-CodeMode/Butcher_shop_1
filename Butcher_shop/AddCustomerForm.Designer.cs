@@ -14,6 +14,7 @@
 
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnClose;
 
         protected override void Dispose(bool disposing)
         {
@@ -37,75 +38,42 @@
 
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
 
             this.SuspendLayout();
 
-            // lblName
-            this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(30, 30);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(90, 15);
-            this.lblName.Text = "Customer Name";
-
-            // txtName
-            this.txtName.Location = new System.Drawing.Point(150, 27);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(200, 23);
-
-            // lblAddress
-            this.lblAddress.AutoSize = true;
-            this.lblAddress.Location = new System.Drawing.Point(30, 70);
-            this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(50, 15);
-            this.lblAddress.Text = "Address";
-
-            // txtAddress
-            this.txtAddress.Location = new System.Drawing.Point(150, 67);
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(200, 23);
-
-            // lblContact
-            this.lblContact.AutoSize = true;
-            this.lblContact.Location = new System.Drawing.Point(30, 110);
-            this.lblContact.Name = "lblContact";
-            this.lblContact.Size = new System.Drawing.Size(50, 15);
-            this.lblContact.Text = "Contact";
-
-            // txtContact
-            this.txtContact.Location = new System.Drawing.Point(150, 107);
-            this.txtContact.Name = "txtContact";
-            this.txtContact.Size = new System.Drawing.Size(200, 23);
+            // Note: Exact positions and properties are managed dynamically in ApplyStylesAndLayout()
+            // Instantiation is kept here to prevent null references and preserve event wires.
 
             // btnSave
-            this.btnSave.Location = new System.Drawing.Point(150, 160);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(90, 30);
-            this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
 
             // btnCancel
-            this.btnCancel.Location = new System.Drawing.Point(260, 160);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(90, 30);
-            this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
 
-            // AddCustomerForm
+            // AddCustomerForm Configuration
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.ClientSize = new System.Drawing.Size(400, 220);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(450, 320); // Matched to Reference
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.BackColor = System.Drawing.Color.White;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.MinimumSize = new System.Drawing.Size(420, 300);
+
+            // Add Controls
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.txtName);
-
             this.Controls.Add(this.lblAddress);
             this.Controls.Add(this.txtAddress);
-
             this.Controls.Add(this.lblContact);
             this.Controls.Add(this.txtContact);
-
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnClose);
 
             this.Name = "AddCustomerForm";
             this.Text = "Add Customer";

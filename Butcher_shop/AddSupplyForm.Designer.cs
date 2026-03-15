@@ -4,143 +4,110 @@
     {
         private System.ComponentModel.IContainer components = null;
 
-        private Panel pnlHeader;
-        private Label lblTitle;
+        private System.Windows.Forms.Label lblTitle;
 
-        private ComboBox cmbSupplier;
-        private ComboBox cmbProduct;
+        private System.Windows.Forms.ComboBox cmbSupplier;
+        private System.Windows.Forms.ComboBox cmbProduct;
 
-        private TextBox txtCost;
-        private TextBox txtQuantity;
+        private System.Windows.Forms.TextBox txtCost;
+        private System.Windows.Forms.TextBox txtQuantity;
 
-        private Button btnSave;
-        private Button btnCancel;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnClose;
 
-        private Label lblSupplier;
-        private Label lblProduct;
-        private Label lblCost;
-        private Label lblQty;
+        private System.Windows.Forms.Label lblSupplier;
+        private System.Windows.Forms.Label lblProduct;
+        private System.Windows.Forms.Label lblCost;
+        private System.Windows.Forms.Label lblQty;
 
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
+            {
                 components.Dispose();
-
+            }
             base.Dispose(disposing);
         }
 
         private void InitializeComponent()
         {
-            pnlHeader = new Panel();
-            lblTitle = new Label();
+            this.lblTitle = new System.Windows.Forms.Label();
 
-            cmbSupplier = new ComboBox();
-            cmbProduct = new ComboBox();
+            this.cmbSupplier = new System.Windows.Forms.ComboBox();
+            this.cmbProduct = new System.Windows.Forms.ComboBox();
 
-            txtCost = new TextBox();
-            txtQuantity = new TextBox();
+            this.txtCost = new System.Windows.Forms.TextBox();
+            this.txtQuantity = new System.Windows.Forms.TextBox();
 
-            btnSave = new Button();
-            btnCancel = new Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
 
-            lblSupplier = new Label();
-            lblProduct = new Label();
-            lblCost = new Label();
-            lblQty = new Label();
+            this.lblSupplier = new System.Windows.Forms.Label();
+            this.lblProduct = new System.Windows.Forms.Label();
+            this.lblCost = new System.Windows.Forms.Label();
+            this.lblQty = new System.Windows.Forms.Label();
 
-            SuspendLayout();
+            this.SuspendLayout();
 
-            // Header Panel
-            pnlHeader.BackColor = Color.FromArgb(45, 45, 48);
-            pnlHeader.Dock = DockStyle.Top;
-            pnlHeader.Height = 50;
-            pnlHeader.MouseDown += pnlHeader_MouseDown;
+            // Note: Exact positions, sizing, and fonts are managed dynamically in ApplyStylesAndLayout()
+            // Instantiation is kept here to prevent null references and preserve original event wires.
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Text = "Record Supply";
+            this.lblTitle.AutoSize = true;
 
-            // Title
-            lblTitle.Text = "Record Supply";
-            lblTitle.ForeColor = Color.White;
-            lblTitle.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            lblTitle.AutoSize = true;
-            lblTitle.Location = new Point(15, 15);
+            this.cmbSupplier.Name = "cmbSupplier";
+            this.cmbSupplier.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 
-            pnlHeader.Controls.Add(lblTitle);
+            this.cmbProduct.Name = "cmbProduct";
+            this.cmbProduct.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 
-            // Supplier
-            lblSupplier.Text = "Supplier";
-            lblSupplier.Font = new Font("Segoe UI", 10F);
-            lblSupplier.Location = new Point(30, 70);
+            this.txtCost.Name = "txtCost";
+            this.txtQuantity.Name = "txtQuantity";
 
-            cmbSupplier.Location = new Point(30, 95);
-            cmbSupplier.Width = 260;
-            cmbSupplier.Font = new Font("Segoe UI", 10F);
+            // btnSave
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
 
-            // Product
-            lblProduct.Text = "Product";
-            lblProduct.Font = new Font("Segoe UI", 10F);
-            lblProduct.Location = new Point(30, 135);
+            // btnCancel
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
 
-            cmbProduct.Location = new Point(30, 160);
-            cmbProduct.Width = 260;
-            cmbProduct.Font = new Font("Segoe UI", 10F);
+            // AddSupplyForm Configuration
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 
-            // Unit Cost
-            lblCost.Text = "Unit Cost";
-            lblCost.Font = new Font("Segoe UI", 10F);
-            lblCost.Location = new Point(30, 200);
+            // Size scaled to neatly fit the 4 inputs plus title and buttons
+            this.ClientSize = new System.Drawing.Size(450, 380);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.BackColor = System.Drawing.Color.White;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.MinimumSize = new System.Drawing.Size(420, 350);
 
-            txtCost.Location = new Point(30, 225);
-            txtCost.Width = 260;
-            txtCost.Font = new Font("Segoe UI", 10F);
+            // Add Controls
+            this.Controls.Add(this.lblTitle);
+            this.Controls.Add(this.lblSupplier);
+            this.Controls.Add(this.cmbSupplier);
+            this.Controls.Add(this.lblProduct);
+            this.Controls.Add(this.cmbProduct);
+            this.Controls.Add(this.lblCost);
+            this.Controls.Add(this.txtCost);
+            this.Controls.Add(this.lblQty);
+            this.Controls.Add(this.txtQuantity);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnClose);
 
-            // Quantity
-            lblQty.Text = "Quantity";
-            lblQty.Font = new Font("Segoe UI", 10F);
-            lblQty.Location = new Point(30, 265);
+            this.Name = "AddSupplyForm";
+            this.Text = "Add Supply";
 
-            txtQuantity.Location = new Point(30, 290);
-            txtQuantity.Width = 260;
-            txtQuantity.Font = new Font("Segoe UI", 10F);
-
-            // Save Button
-            btnSave.Text = "Save";
-            btnSave.BackColor = Color.ForestGreen;
-            btnSave.ForeColor = Color.White;
-            btnSave.FlatStyle = FlatStyle.Flat;
-            btnSave.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            btnSave.Location = new Point(30, 340);
-            btnSave.Width = 120;
-            btnSave.Height = 40;
-            btnSave.Click += btnSave_Click;
-
-            // Cancel Button
-            btnCancel.Text = "Cancel";
-            btnCancel.BackColor = Color.Gray;
-            btnCancel.ForeColor = Color.White;
-            btnCancel.FlatStyle = FlatStyle.Flat;
-            btnCancel.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            btnCancel.Location = new Point(170, 340);
-            btnCancel.Width = 120;
-            btnCancel.Height = 40;
-            btnCancel.Click += btnCancel_Click;
-
-            // Form
-            BackColor = Color.WhiteSmoke;
-            ClientSize = new Size(330, 420);
-            Controls.Add(pnlHeader);
-            Controls.Add(lblSupplier);
-            Controls.Add(cmbSupplier);
-            Controls.Add(lblProduct);
-            Controls.Add(cmbProduct);
-            Controls.Add(lblCost);
-            Controls.Add(txtCost);
-            Controls.Add(lblQty);
-            Controls.Add(txtQuantity);
-            Controls.Add(btnSave);
-            Controls.Add(btnCancel);
-
-            StartPosition = FormStartPosition.CenterParent;
-
-            ResumeLayout(false);
+            this.ResumeLayout(false);
+            this.PerformLayout();
         }
     }
 }

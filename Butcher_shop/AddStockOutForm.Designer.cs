@@ -18,6 +18,7 @@
 
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnClose;
 
         protected override void Dispose(bool disposing)
         {
@@ -45,88 +46,40 @@
 
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
 
             this.SuspendLayout();
 
-            // FORM SETTINGS
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(420, 420);
-            this.BackColor = System.Drawing.Color.White;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Add Stock Out";
-
-            // TITLE
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
-            this.lblTitle.Location = new System.Drawing.Point(120, 20);
+            // Note: Exact positions, sizing, and fonts are managed dynamically in ApplyStylesAndLayout()
+            // Instantiation is kept here to prevent null references and preserve original event wires.
+            this.lblTitle.Name = "lblTitle";
             this.lblTitle.Text = "Record Stock Out";
+            this.lblTitle.AutoSize = true;
 
-            // PRODUCT ID LABEL
-            this.lblProduct.AutoSize = true;
-            this.lblProduct.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.lblProduct.Location = new System.Drawing.Point(40, 90);
-            this.lblProduct.Text = "Product ID";
-
-            // PRODUCT ID TEXTBOX
-            this.txtProductID.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.txtProductID.Location = new System.Drawing.Point(40, 115);
-            this.txtProductID.Size = new System.Drawing.Size(330, 27);
-
-            // QUANTITY LABEL
-            this.lblQuantity.AutoSize = true;
-            this.lblQuantity.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.lblQuantity.Location = new System.Drawing.Point(40, 155);
-            this.lblQuantity.Text = "Quantity Out";
-
-            // QUANTITY TEXTBOX
-            this.txtQuantity.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.txtQuantity.Location = new System.Drawing.Point(40, 180);
-            this.txtQuantity.Size = new System.Drawing.Size(330, 27);
-
-            // DATE LABEL
-            this.lblDate.AutoSize = true;
-            this.lblDate.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.lblDate.Location = new System.Drawing.Point(40, 220);
-            this.lblDate.Text = "Date";
-
-            // DATE PICKER
-            this.dtpDate.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.dtpDate.Location = new System.Drawing.Point(40, 245);
-            this.dtpDate.Size = new System.Drawing.Size(330, 27);
-
-            // REASON LABEL
-            this.lblReason.AutoSize = true;
-            this.lblReason.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.lblReason.Location = new System.Drawing.Point(40, 285);
-            this.lblReason.Text = "Reason";
-
-            // REASON TEXTBOX
-            this.txtReason.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.txtReason.Location = new System.Drawing.Point(40, 310);
-            this.txtReason.Size = new System.Drawing.Size(330, 27);
-
-            // SAVE BUTTON
+            // btnSave
+            this.btnSave.Name = "btnSave";
             this.btnSave.Text = "Save";
-            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.btnSave.BackColor = System.Drawing.Color.FromArgb(40, 167, 69);
-            this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Location = new System.Drawing.Point(40, 360);
-            this.btnSave.Size = new System.Drawing.Size(150, 40);
+            this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
 
-            // CANCEL BUTTON
+            // btnCancel
+            this.btnCancel.Name = "btnCancel";
             this.btnCancel.Text = "Cancel";
-            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(220, 53, 69);
-            this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Location = new System.Drawing.Point(220, 360);
-            this.btnCancel.Size = new System.Drawing.Size(150, 40);
+            this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
 
-            // ADD CONTROLS
+            // AddStockOutForm Configuration
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+
+            // Size configured to comfortably fit 4 input fields + title + buttons
+            this.ClientSize = new System.Drawing.Size(450, 380);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.BackColor = System.Drawing.Color.White;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.MinimumSize = new System.Drawing.Size(420, 350);
+
+            // Add Controls
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.lblProduct);
             this.Controls.Add(this.txtProductID);
@@ -138,6 +91,10 @@
             this.Controls.Add(this.txtReason);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnClose);
+
+            this.Name = "AddStockOutForm";
+            this.Text = "Add Stock Out";
 
             this.ResumeLayout(false);
             this.PerformLayout();
