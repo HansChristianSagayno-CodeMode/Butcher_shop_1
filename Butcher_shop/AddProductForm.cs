@@ -10,7 +10,7 @@ namespace Butcher_shop
 {
     public partial class AddProductForm : Form
     {
-        string connString = "server=localhost;user id=root;password=;database=butcher_shop;";
+        string connString = "server=localhost;user id=root;password=;database=butcher_shop_db;";
 
         bool dragging = false;
         Point dragCursorPoint;

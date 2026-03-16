@@ -4,9 +4,29 @@
     {
         private System.ComponentModel.IContainer components = null;
 
+        private System.Windows.Forms.Label lblTitle;
+
+        // Added labels to match reference styling structure
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label lblCategory;
+        private System.Windows.Forms.Label lblUnit;
+        private System.Windows.Forms.Label lblPrice;
+        private System.Windows.Forms.Label lblStock;
+
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtCategory;
+        private System.Windows.Forms.TextBox txtUnit;
+        private System.Windows.Forms.TextBox txtPrice;
+        private System.Windows.Forms.TextBox txtStock;
+        private System.Windows.Forms.CheckBox chkActive;
+
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnClose;
+
         protected override void Dispose(bool disposing)
         {
-            if (disposing && components != null)
+            if (disposing && (components != null))
                 components.Dispose();
 
             base.Dispose(disposing);
@@ -14,100 +34,88 @@
 
         private void InitializeComponent()
         {
-            this.pnlMain = new Panel();
-            this.btnUpdate = new Button();
-            this.btnCancel = new Button();
-            this.txtName = new TextBox();
-            this.txtCategory = new TextBox();
-            this.txtUnit = new TextBox();
-            this.txtPrice = new TextBox();
-            this.txtStock = new TextBox();
-            this.chkActive = new CheckBox();
+            this.lblTitle = new System.Windows.Forms.Label();
 
-            this.lblTitle = new Label();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblCategory = new System.Windows.Forms.Label();
+            this.lblUnit = new System.Windows.Forms.Label();
+            this.lblPrice = new System.Windows.Forms.Label();
+            this.lblStock = new System.Windows.Forms.Label();
 
-            SuspendLayout();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtCategory = new System.Windows.Forms.TextBox();
+            this.txtUnit = new System.Windows.Forms.TextBox();
+            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.txtStock = new System.Windows.Forms.TextBox();
+            this.chkActive = new System.Windows.Forms.CheckBox();
 
-            // FORM
-            this.BackColor = Color.White;
-            this.ClientSize = new Size(420, 420);
-            this.FormBorderStyle = FormBorderStyle.None;
-            this.StartPosition = FormStartPosition.CenterParent;
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
 
-            // TITLE
-            lblTitle.Text = "Update Product";
-            lblTitle.Font = new Font("Segoe UI", 16, FontStyle.Bold);
-            lblTitle.Location = new Point(20, 20);
-            lblTitle.AutoSize = true;
+            this.SuspendLayout();
 
-            // TEXTBOXES
-            txtName.PlaceholderText = "Product Name";
-            txtName.Location = new Point(40, 90);
-            txtName.Size = new Size(330, 30);
+            // Note: Exact positions, sizing, and fonts are managed dynamically in ApplyStylesAndLayout()
+            // Instantiation is kept here to prevent null references and preserve original event wires.
 
-            txtCategory.PlaceholderText = "Category";
-            txtCategory.Location = new Point(40, 140);
-            txtCategory.Size = new Size(330, 30);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Text = "Update Product";
+            this.lblTitle.AutoSize = true;
 
-            txtUnit.PlaceholderText = "Unit (kg, pcs)";
-            txtUnit.Location = new Point(40, 190);
-            txtUnit.Size = new Size(330, 30);
+            this.chkActive.Name = "chkActive";
+            this.chkActive.Text = "Product Active";
 
-            txtPrice.PlaceholderText = "Price";
-            txtPrice.Location = new Point(40, 240);
-            txtPrice.Size = new Size(330, 30);
+            // btnUpdate
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
 
-            txtStock.PlaceholderText = "Stock Level";
-            txtStock.Location = new Point(40, 290);
-            txtStock.Size = new Size(330, 30);
+            // btnCancel
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
 
-            // CHECKBOX
-            chkActive.Text = "Product Active";
-            chkActive.Location = new Point(40, 330);
+            // UpdateProductForm Configuration
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 
-            // BUTTON UPDATE
-            btnUpdate.Text = "Update";
-            btnUpdate.BackColor = Color.FromArgb(30, 144, 255);
-            btnUpdate.ForeColor = Color.White;
-            btnUpdate.FlatStyle = FlatStyle.Flat;
-            btnUpdate.Size = new Size(120, 40);
-            btnUpdate.Location = new Point(70, 360);
-            btnUpdate.Click += btnUpdate_Click;
+            // Increased height to cleanly fit 5 inputs + checkbox + title + buttons
+            this.ClientSize = new System.Drawing.Size(450, 460);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.BackColor = System.Drawing.Color.White;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.MinimumSize = new System.Drawing.Size(420, 420);
 
-            // BUTTON CANCEL
-            btnCancel.Text = "Cancel";
-            btnCancel.BackColor = Color.Gray;
-            btnCancel.ForeColor = Color.White;
-            btnCancel.FlatStyle = FlatStyle.Flat;
-            btnCancel.Size = new Size(120, 40);
-            btnCancel.Location = new Point(220, 360);
-            btnCancel.Click += btnCancel_Click;
+            // Add Controls
+            this.Controls.Add(this.lblTitle);
 
-            // ADD CONTROLS
-            Controls.Add(lblTitle);
-            Controls.Add(txtName);
-            Controls.Add(txtCategory);
-            Controls.Add(txtUnit);
-            Controls.Add(txtPrice);
-            Controls.Add(txtStock);
-            Controls.Add(chkActive);
-            Controls.Add(btnUpdate);
-            Controls.Add(btnCancel);
+            this.Controls.Add(this.lblName);
+            this.Controls.Add(this.txtName);
 
-            ResumeLayout(false);
+            this.Controls.Add(this.lblCategory);
+            this.Controls.Add(this.txtCategory);
+
+            this.Controls.Add(this.lblUnit);
+            this.Controls.Add(this.txtUnit);
+
+            this.Controls.Add(this.lblPrice);
+            this.Controls.Add(this.txtPrice);
+
+            this.Controls.Add(this.lblStock);
+            this.Controls.Add(this.txtStock);
+
+            this.Controls.Add(this.chkActive);
+            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnClose);
+
+            this.Name = "UpdateProductForm";
+            this.Text = "Update Product";
+
+            this.ResumeLayout(false);
+            this.PerformLayout();
         }
-
-        private Panel pnlMain;
-        private TextBox txtName;
-        private TextBox txtCategory;
-        private TextBox txtUnit;
-        private TextBox txtPrice;
-        private TextBox txtStock;
-        private CheckBox chkActive;
-
-        private Button btnUpdate;
-        private Button btnCancel;
-
-        private Label lblTitle;
     }
 }
